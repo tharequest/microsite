@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Microsite Akademik & Kemahasiswaan-FMIPA Untan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600&display=swap" rel="stylesheet"/>
+  <!-- Google Material Symbols — dipakai untuk ikon card Akses Cepat Layanan -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0"/>
+  <style>
+    /* Boilerplate resmi Google — wajib ada agar Material Symbols render benar */
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 26px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="/assets/images/logologin.png">
+  <!-- CSS MODULAR — JANGAN load style.css lama! -->
+  <script type="module" crossorigin src="/assets/index-DhVHgQRv.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/layanan-popup-qGJfxhSt.js">
+  <link rel="stylesheet" crossorigin href="/assets/layanan-popup-DLrtWXZK.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-p9d7Ifn0.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <a href="index.html" class="brand">
+
+      <!-- 3 logo institusi -->
+      <div class="logo-group">
+        <img src="/assets/logo-untan-BA7O4QBw.png" alt="Logo Tut Wuri, UNTAN, Diktisaintek"/>
+      </div>
+
+      <!-- Garis pemisah -->
+      <div class="logo-divider"></div>
+
+      <!-- Nama microsite -->
+      <div class="brand-text">
+        <span class="label">FMIPA Untan</span>
+        <span class="name">Info Akademik & Kemahasiswaan</span>
+      </div>
+
+    </a>
+
+  <div class="header-spacer"></div>
+
+<!-- Nav desktop ---------------------------------------------------------------------------------------------->
+  <nav class="main-nav">
+  <a href="index.html" class="active">Beranda</a>
+
+<!--Kontak-->  
+  <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
+
+  <!-- <a href="https://xandria.pduntan.id/login" target="_blank">Bioijazah</a>
+  <a href="https://satu.untan.ac.id/gate/login" target="_blank">Satu UNTAN</a> -->
+</nav>
+
+    <!-- Hamburger (mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile nav drawer -------------------------------------------------------------------------------------->
+ <div class="mobile-nav" id="mobileNav">
+
+  <a href="index.html">Beranda</a>
+
+  <!-- Menu lain di mobile-->
+  <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
+
+  <!-- <a href="https://xandria.pduntan.id/login" target="_blank">Bioijazah</a>
+  <a href="https://satu.untan.ac.id/gate/login" target="_blank">Satu UNTAN</a> --> 
+</div>
+</header>
+<!-- ══════════════════════════════════════════════════════════════════ -->
+
+
+<!-- ═══ DUAL SLIDER ════════════════════════════════ -->
+<section class="hero">
+  <div class="slider-card">
+    <div class="slider-viewport">
+      <div class="slider-track" id="track1"></div>
+    </div>
+    <button class="slider-btn prev" data-slider="1" data-dir="-1">&#8592;</button>
+    <button class="slider-btn next" data-slider="1" data-dir="1">&#8594;</button>
+    <div class="slider-dots" id="dots1"></div>
+  </div>
+  <div class="slider-card">
+    <div class="slider-viewport">
+      <div class="slider-track" id="track2"></div>
+    </div>
+    <button class="slider-btn prev" data-slider="2" data-dir="-1">&#8592;</button>
+    <button class="slider-btn next" data-slider="2" data-dir="1">&#8594;</button>
+    <div class="slider-dots" id="dots2"></div>
+  </div>
+</section>
+
+<!-- ═══ AKSES CEPAT ═════════════════════════════════ -->
+<section class="quick-section">
+  <div class="section-header">
+    <h3>Akses Cepat Layanan</h3>
+    <div class="line"></div>
+  </div>
+  <div class="quick-grid">
+    <a href="https://mipa.untan.ac.id/" target="_blank" rel="noopener noreferrer" class="quick-card">
+      <div class="quick-icon" style="background:#f4f7fb;">
+        <img src="/assets/logologin-jPekz-o_.png" alt="Logo FMIPA Untan" style="width:30px;height:30px;object-fit:contain;">
+      </div>
+      <h4>Website FMIPA Untan</h4>
+      <p>Profil Fakultas, Pilihan Program Studi, Berita terbaru Fakultas</p>
+    </a>
+    <a id="btn-jenis-layanan" href="#" class="quick-card" onclick="return false;">
+      <div class="quick-icon" style="background:#e8f0fd;">
+        <span class="material-symbols-outlined" style="color:#1a4f8a;">assignment</span>
+      </div>
+      <h4>Jenis Layanan</h4>
+      <p>Lihat semua jenis layanan akademik dan administrasi</p>
+    </a>
+    <a id="btn-info-penting" href="#" class="quick-card" onclick="return false;">
+      <div class="quick-icon" style="background:#eeedfe;">
+        <span class="material-symbols-outlined" style="color:#3c3489;">push_pin</span>
+      </div>
+      <h4>Info Penting</h4>
+      <p>Prosedur Cuti, Edaran PISN, Perbaikan DATA PDDIKTI dan edaran resmi lainnya</p>
+    </a>
+    <a id="btn-download" href="#" class="quick-card" onclick="return false;">
+      <div class="quick-icon" style="background:#fef3e2;">
+        <span class="material-symbols-outlined" style="color:#854f0b;">download</span>
+      </div>
+      <h4>Download</h4>
+      <p>Berkas Syarat Sidang, Bebas Laboratorium Terbaru, dan dokumen lainnya</p>
+    </a>
+    <a href="ceksurat.html" class="quick-card">
+      <div class="quick-icon" style="background:#fce8f3;">
+        <span class="material-symbols-outlined" style="color:#993556;">mail</span>
+      </div>
+      <h4>Cek Surat</h4>
+      <p>Lacak status surat (Aktif, Cuti, Pindah Kuliah), Pengunduran diri dan Izin Kegiatan</p>
+    </a>
+    <a href="https://xandria.pduntan.id/login" target="_blank" rel="noopener noreferrer" class="quick-card">
+      <div class="quick-icon" style="background:#fef3e2;">
+        <span class="material-symbols-outlined" style="color:#854f0b;">school</span>
+      </div>
+      <h4>Bio Ijazah</h4>
+      <p>Situs Verifikasi dan cetak biodata mahasiswa untan resmi</p>
+    </a>
+    <a href="https://satu.untan.ac.id/gate/login" target="_blank" rel="noopener noreferrer" class="quick-card">
+      <div class="quick-icon" style="background:#e6f7f0;">
+        <span class="material-symbols-outlined" style="color:#0f6e56;">account_balance</span>
+      </div>
+      <h4>Satu UNTAN</h4>
+      <p>Portal terpadu sistem informasi universitas Tanjungpura</p>
+    </a>  
+    <a href="https://sekarfmipa.vercel.app/" class="quick-card">
+      <div class="quick-icon" style="background:#f4f7fb;">
+        <img src="/assets/sekar-logo-CZjbSeZM.png" alt="Logo SEKAR" style="width:30px;height:30px;object-fit:contain;">
+      </div>
+      <h4>Informasi Ruangan</h4>
+      <p>Cari informasi ketersediaan ruangan kelas FMIPA Untan</p>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ INFO STRIP ═══════════════════════════════════ -->
+<section class="info-strip">
+  <div class="info-card">
+    <div class="card-title"><span>📰</span> Informasi Terkini</div>
+    <ul class="news-list" id="newsList"></ul>
+  </div>
+  <div class="stat-column">
+
+    <!-- Statistik Mahasiswa -->
+    <div class="info-card stat-card-wrap">
+      <div class="card-title"><span>📊</span> Statistik Mahasiswa 2026</div>
+      <div class="stat-grid-new">
+        <div class="stat-item-new" style="--sc:#e8f0fd;--cc:#1a4f8a;">
+          <div class="stat-icon-new">👤</div>
+          <div class="stat-body-new">
+            <div class="stat-num-new">2.370</div>
+            <div class="stat-label-new">Mahasiswa Aktif</div>
+          </div>
+        </div>
+        <div class="stat-item-new" style="--sc:#e6f7f0;--cc:#065f46;">
+          <div class="stat-icon-new">🎓</div>
+          <div class="stat-body-new">
+            <div class="stat-num-new">149</div>
+            <div class="stat-label-new">Mahasiswa Lulus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistik Pengunjung -->
+    <!-- <div class="info-card stat-card-wrap">
+      <div class="card-title"><span>🌐</span> Statistik kunjungan</div>
+      <div class="stat-grid-new">
+        <div class="stat-item-new" style="--sc:#eff6ff;--cc:#1d4ed8;">
+          <div class="stat-icon-new">📅</div>
+          <div class="stat-body-new">
+            <div class="stat-num-new" id="stat-today">–</div>
+            <div class="stat-label-new">Hari Ini</div>
+          </div>
+        </div>
+        <div class="stat-item-new" style="--sc:#f5f3ff;--cc:#6d28d9;">
+          <div class="stat-icon-new">📆</div>
+          <div class="stat-body-new">
+            <div class="stat-num-new" id="stat-week">–</div>
+            <div class="stat-label-new">Minggu Ini</div>
+          </div>
+        </div>
+        <div class="stat-item-new" style="--sc:#fff7ed;--cc:#c2410c;">
+          <div class="stat-icon-new">🗓️</div>
+          <div class="stat-body-new">
+            <div class="stat-num-new" id="stat-month">–</div>
+            <div class="stat-label-new">Bulan Ini</div>
+          </div>
+        </div>
+        <div class="stat-item-new" style="--sc:#f0fdf4;--cc:#15803d;">
+          <div class="stat-icon-new">🏆</div>
+          <div class="stat-body-new">
+            <div class="stat-num-new" id="stat-alltime">–</div>
+            <div class="stat-label-new">Total Pengunjung</div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</section>
+
+<!-- ═══ FOOTER ══════════════════════════════════════ -->
+<footer>
+  <!-- Floating bubbles — pure CSS, like Lens.xyz -->
+  <div class="footer-bubbles">
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+  <div class="footer-texture"></div>
+  <div class="footer-top">
+    <!-- Brand column -->
+    <div class="footer-brand">
+      <a href="index.html" class="brand">
+        <div class="logo-group">
+          <img src="/assets/logologin-jPekz-o_.png" alt="Logo FMIPA UNTAN"/>
+        </div>
+        <div class="brand-text">
+          <span class="label">FMIPA Untan</span>
+          <span class="name">Akademik & Kemahasiswaan</span>
+        </div>
+      </a>
+      <p class="footer-desc">Layanan Akademik dan Kemahasiswaan<br>Fakultas MIPA Universitas Tanjungpura</p>
+    </div>
+
+ <!-- link terkait -->
+    <div class="footer-col">
+      <h5>Link Terkait</h5>
+      <ul>
+        <li><a href="https://untan.ac.id/" target="_blank" rel="noopener noreferrer">Website UNTAN</a></li>
+        <li><a href="https://mipa.untan.ac.id/" target="_blank" rel="noopener noreferrer">Website FMIPA UNTAN</a></li>
+      </ul>
+    </div>
+
+    <!-- Layanan -->
+    <div class="footer-col">
+      <h5>Layanan</h5>
+      <ul>
+        <li><a href="#" onclick="openLayananPopup(); return false;">Jenis Layanan</a></li>
+        <li><a href="https://xandria.pduntan.id/login" target="_blank" rel="noopener noreferrer">Bio Ijazah</a></li>
+        <li><a href="https://satu.untan.ac.id/gate/login" target="_blank" rel="noopener noreferrer">Satu UNTAN</a></li>
+        <li><a href="ceksurat.html">Cek Surat</a></li>
+      </ul>
+    </div>
+
+    <!-- Bantuan -->
+    <div class="footer-col">
+      <h5>Bantuan</h5>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#" onclick="openKontakPopup(); return false;">Kontak</a></li>
+        <li><a href="kebijakan-privasi.html">Kebijakan Privasi</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <span>© 2026 <a href="https://www.instagram.com/kaum.surya/" target="_blank" rel="noopener noreferrer">Akademik &amp; Kemahasiswaan FMIPA Untan</a></span>
+    <span class="footer-badge">✨ microsite v3.0</span>
+  </div>
+</footer>
+
+<!-- ═══ POPUP ════════════════════════════════════════ -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-inner" id="popupInner"></div>
+  <button class="popup-close" id="popupClose">✕</button>
+</div>
+
+<!-- ═══ CHATBOT KIRANA (floating bottom, gaya ChatGPT) ══════════════════ -->
+
+<!-- Overlay percakapan — muncul di atas input bar saat chat aktif -->
+<div class="kirana-overlay" id="kiranaOverlay">
+  <div class="kirana-panel">
+
+    <div class="kirana-panel-header">
+      <div class="kirana-panel-title">
+        <img class="kirana-panel-avatar" src="/assets/kiranabot-BWMVcmDT.png" alt="Kirana">
+        <div>
+          <div class="kirana-panel-name">Kirana <span class="kirana-online-dot"></span></div>
+          <span class="kirana-panel-sub">Asisten Virtual FMIPA Untan</span>
+        </div>
+      </div>
+      <button class="kirana-close-btn" id="kiranaCloseBtn">✕</button>
+    </div>
+
+    <div class="kirana-log" id="kiranaLog"></div>
+
+    <div class="kirana-chips" id="kiranaChips">
+      <button class="kirana-chip" data-query="Bagaimana cara membuat Bio Ijazah?">📄 Bio Ijazah</button>
+      <button class="kirana-chip" data-query="Apa itu SATU UNTAN?">🎓 SATU UNTAN</button>
+      <button class="kirana-chip" data-query="Bagaimana cara cek surat?">✉️ Cek Surat</button>
+      <button class="kirana-chip" data-query="Kapan jadwal wisuda?">🎉 Jadwal Wisuda</button>
+      <button class="kirana-chip" data-query="Bagaimana cara menghubungi staf akademik?">📞 Kontak</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Input bar — sticky bottom -->
+<div class="kirana-bar" id="kiranaBar">
+  <div class="kirana-bar-inner">
+    <div class="kirana-avatar-wrap">
+      <div class="kirana-bubble-hint" id="kiranaBubbleHint">
+        <span class="kirana-bubble-hint-text" id="kiranaBubbleText"></span>
+      </div>
+      <img src="/assets/kiranabot-BWMVcmDT.png" alt="Kirana" class="kirana-bar-avatar" id="kiranaBarAvatar">
+    </div>
+    <div class="kirana-bar-inputwrap" id="kiranaBarInputWrap">
+      <textarea
+        class="kirana-bar-textarea"
+        id="kiranaInput"
+        placeholder="Tanya Kirana apa saja tentang FMIPA Untan"
+        rows="1"></textarea>
+      <button class="kirana-bar-send" id="kiranaSendBtn" aria-label="Kirim">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div class="lp-overlay" id="lp-overlay">
+  <div class="lp-modal">
+
+    <!-- Header -->
+    <div class="lp-header">
+      <div class="lp-header-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="2" width="6" height="4" rx="1"/>
+          <path d="M8 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-2"/>
+          <line x1="8" y1="10" x2="16" y2="10"/>
+          <line x1="8" y1="14" x2="16" y2="14"/>
+          <line x1="8" y1="18" x2="12" y2="18"/>
+        </svg>
+      </div>
+      <div>
+        <div class="lp-header-title">Jenis Layanan Akademik</div>
+        <div class="lp-header-sub">Pilih formulir sesuai kebutuhan</div>
+      </div>
+      <button class="lp-close" onclick="closeLayananPopup()">✕</button>
+    </div>
+
+    <!-- Search -->
+    <div class="lp-search-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="lp-search" placeholder="Cari layanan..." oninput="lpFilter(this.value)"/>
+    </div>
+
+    <!-- Daftar form -->
+    <div class="lp-list" id="lp-list"></div>
+
+    <!-- Footer -->
+    <div class="lp-footer">
+      <span id="lp-count">7 layanan tersedia</span>
+      <span class="lp-badge">Google Form</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ Popup Info Penting (reuse class lp- dari layanan-popup.css) ═══ -->
+<div class="lp-overlay" id="ip-overlay">
+  <div class="lp-modal">
+    <div class="lp-header">
+      <div class="lp-header-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <div>
+        <div class="lp-header-title">Info Penting</div>
+        <div class="lp-header-sub">Pedoman dan edaran resmi FMIPA Untan</div>
+      </div>
+      <button class="lp-close" onclick="closeInfoPentingPopup()">✕</button>
+    </div>
+    <div class="lp-search-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="ip-search" placeholder="Cari info..." oninput="idpFilter('ip', INFO_PENTING_DATA, this.value)"/>
+    </div>
+    <div class="lp-list" id="ip-list"></div>
+    <div class="lp-footer">
+      <span id="ip-count">6 dokumen</span>
+      <span class="lp-badge">Info Penting</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Popup Download (reuse class lp- dari layanan-popup.css) ═══ -->
+<div class="lp-overlay" id="dl-overlay">
+  <div class="lp-modal">
+    <div class="lp-header">
+      <div class="lp-header-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+      </div>
+      <div>
+        <div class="lp-header-title">Download</div>
+        <div class="lp-header-sub">Berkas dan dokumen unduhan</div>
+      </div>
+      <button class="lp-close" onclick="closeDownloadPopup()">✕</button>
+    </div>
+    <div class="lp-search-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="dl-search" placeholder="Cari dokumen..." oninput="idpFilter('dl', DOWNLOAD_DATA, this.value)"/>
+    </div>
+    <div class="lp-list" id="dl-list"></div>
+    <div class="lp-footer">
+      <span id="dl-count">3 dokumen</span>
+      <span class="lp-badge">Unduhan</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Popup Kontak di Header ═══════════════════════════════════ -->
+<div id="kt-overlay" class="kt-overlay">
+  <div class="kt-modal">
+    <div class="kt-header">
+      <div class="kt-header-icon">📞</div>
+      <div>
+        <div class="kt-header-title">Hubungi Kami</div>
+        <div class="kt-header-sub">Klik nama untuk chat WhatsApp</div>
+      </div>
+      <button class="kt-close" id="kt-close-btn">✕</button>
+    </div>
+    <div class="kt-list" id="kt-list"></div>
+    <div class="kt-footer">
+      <span class="kt-footer-note">
+        Aktif pada jam kerja · Senin – Jumat
+      </span>
+      <span class="kt-badge">WhatsApp</span>
+    </div>
+  </div>
+</div>
+
+<!-- JS — urutan load penting! -->
+
+</body>
+</html>

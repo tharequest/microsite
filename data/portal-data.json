@@ -1,0 +1,239 @@
+{
+  "slides": [
+    {
+      "id": "sl-1781754980205-dl28",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Biodata Online",
+      "desc": "Form Pengisian Biodata Online Yudisium Periode IV TA 2025/2026",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781754975595-biodata_online.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781754975595-biodata_online.jpg",
+      "popupLabel": "Biodata Online"
+    },
+    {
+      "id": "s2-2",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Permohonan Cuti Kuliah",
+      "desc": "Scan Barcode Untuk Akses Form Surat Permohonan Cuti Kuliah",
+      "imageUrl": "/api/get-file?path=assets/images/1776064298360-inslide2.png",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776064298360-inslide2.png",
+      "popupLabel": "Permohonan Cuti Kuliah"
+    },
+    {
+      "id": "s2-1",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Surat Keterangan Lulus",
+      "desc": "Scan Barcode Untuk Akses Form Surat Keterangan Lulus",
+      "imageUrl": "/api/get-file?path=assets/images/1776063077168-inslide3.png",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776063077168-inslide3.png",
+      "popupLabel": "Surat Keterangan Lulus"
+    },
+    {
+      "id": "s2-0",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Keterangan Aktif Kuliah",
+      "desc": "Scan Barcode ini Untuk Akses Form Surat Keterangan Aktif Kuliah dengan",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
+      "popupLabel": "Keterangan Aktif Kuliah"
+    },
+    {
+      "id": "sl-1776065217881-dbpe",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Surat Pengunduran Diri",
+      "desc": "Scan Barcode Untuk Akses Form Pengunduran Diri",
+      "imageUrl": "/api/get-file?path=assets/images/1776064660043-inslide4.png",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776064660043-inslide4.png",
+      "popupLabel": "Surat Pengunduran Diri"
+    },
+    {
+      "id": "sl-1776065608739-y2d9",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Permohonan Pindah Kuliah",
+      "desc": "Scan barcode untuk akses ke form surat permohonan pindah kuliah",
+      "imageUrl": "/api/get-file?path=assets/images/1776065600006-inslide5.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776065600006-inslide5.jpg",
+      "popupLabel": "Permohonan Pindah Kuliah"
+    },
+    {
+      "id": "sl-1781066729260-tgga",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Surat Pernyataan Terbit Jurnal",
+      "desc": "Form Isian Surat Pernyataan Pembimbing Terhadap Artikel Mahasiswa yang belum berstatus terbit",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781066725346-Jurnal.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781066725346-Jurnal.jpg",
+      "popupLabel": "Surat Pernyataan Terbit Jurnal"
+    },
+    {
+      "id": "sl-1776065799207-62ek",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Berkas Daftar Ulang",
+      "desc": "Berkas daftar ulang mahasiswa baru",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1782879440235-Pengumuman__4_.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1782879440235-Pengumuman__4_.jpg",
+      "popupLabel": "Berkas Daftar Ulang"
+    },
+    {
+      "id": "sl-1776065824272-dqrd",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Berkas Daftar Ulang",
+      "desc": "Berkas daftar ulang mahasiswa lama",
+      "imageUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
+      "popupLabel": "Berkas Daftar Ulang"
+    },
+    {
+      "id": "sl-1776065943712-hsxp",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Bagi Yang Akan/Sudah Sidang",
+      "desc": "Bagi mahasiswa yang akan/sudah sidang harap segera mengisi ini",
+      "imageUrl": "/api/get-file?path=assets/images/1776065932155-slide2.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776065932155-slide2.jpg",
+      "popupLabel": "Bagi Yang Akan/Sudah Sidang"
+    },
+    {
+      "id": "s1-0",
+      "slider": 1,
+      "tag": "Pengumuman",
+      "title": "Jam Layanan Akademik",
+      "desc": "Jam Layanan Operasional Akademik dan Kemahasiswaan Senin s.d Kamis, Jumat (WFH)",
+      "imageUrl": "/api/get-file?path=assets/images/1776060763449-0slide1.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776060763449-0slide1.jpg",
+      "popupLabel": "Jam Layanan Akademik"
+    },
+    {
+      "id": "s1-2",
+      "slider": 1,
+      "tag": "Informasi",
+      "title": "Info Wisuda",
+      "desc": "Berkas Kelengkapan Pendaftaran Wisuda Periode IV T.A 2025/2026",
+      "imageUrl": "/api/get-file?path=assets/images/1776062272760-slide5.png",
+      "popupType": "pdf",
+      "popupUrl": "/api/get-file?path=assets%2Fpdf%2F1782055970135-get-file.pdf",
+      "popupLabel": "Info Wisuda",
+      "hidden": false
+    },
+    {
+      "id": "sl-1776062471065-5fyk",
+      "slider": 1,
+      "tag": "Akademik",
+      "title": "Informasi Daftar Ulang",
+      "desc": "Informasi Daftar Ulang Semester Genap TA 2025/2026",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1782957010588-daftarulang.jpg",
+      "popupType": "pdf",
+      "popupUrl": "/api/get-file?path=assets%2Fpdf%2F1782957015643-PENGUMUMAN_DAFTAR_ULANG_SEMESTER_GAZAL_T.A._2026-2026.pdf",
+      "popupLabel": "Informasi Daftar Ulang",
+      "hidden": false
+    },
+    {
+      "id": "s1-1",
+      "slider": 1,
+      "tag": "Akademik",
+      "title": "Kalender Akademik",
+      "desc": "Kalender Akademik Semester Genap T.A 2025 / 2026",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1783041136761-Pengumuman__2_.jpg",
+      "popupType": "pdf",
+      "popupUrl": "/api/get-file?path=assets%2Fpdf%2F1783041141795-Kalender_Akademik.pdf",
+      "popupLabel": "Kalender Akademik"
+    },
+    {
+      "id": "sl-1781687535127-5ibp",
+      "slider": 1,
+      "tag": "Pengumuman",
+      "title": "Keterangan UKT",
+      "desc": "Surat Keterangan UKT",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781687501654-Pengumuman__3_.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781687501654-Pengumuman__3_.jpg",
+      "popupLabel": "Keterangan UKT",
+      "hidden": true
+    },
+    {
+      "id": "sl-1781053774174-a68b",
+      "slider": 1,
+      "tag": "Pengumuman",
+      "title": "Pemotonga UKT",
+      "desc": "Pemotongan UKT 50% Bagi Mahasiswa Akhir",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781053768720-info_ukt.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781053768720-info_ukt.jpg",
+      "popupLabel": "Pemotonga UKT"
+    },
+    {
+      "id": "sl-1779239090252-kzwh",
+      "slider": 1,
+      "tag": "Pengumuman",
+      "title": "Administrasi Jurusan",
+      "desc": "Pengalihan Layanan Administrasi Jurusan",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1779239083583-Pengumuman_Peralihan_Pelayanan_Jurusan_.png",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1779239083583-Pengumuman_Peralihan_Pelayanan_Jurusan_.png",
+      "popupLabel": "Administrasi Jurusan"
+    }
+  ],
+  "news": [
+    {
+      "id": "n-1781751334283-muuf",
+      "date": "18 Juni",
+      "text": "Pendaftaran Beasiswa BSI Scolarship",
+      "link": "",
+      "pdfLink": "https://drive.google.com/file/d/1n4muYejfFefAy_J8qgfPBFdodPhl_Qc1/view?usp=drive_link"
+    },
+    {
+      "id": "n-1781681896882-frcy",
+      "date": "17 Juni",
+      "text": "Wisuda Periode IV T.A 2025/2026 Universitas Tanjungpura akan dilaksanakan pada 29 Juli dan/atau 30 Juli 2026",
+      "link": "",
+      "pdfLink": "https://drive.google.com/file/d/1EjY_RxBvtsvvThuVfMxyJ6eLZCDdfsvB/view?usp=drive_link"
+    },
+    {
+      "id": "n-1781681704086-qmpp",
+      "date": "17 Juni",
+      "text": "Pendaftaran Beasiswa Peduli Orangutan Kalimantan Barat (WBOCS)",
+      "link": "",
+      "pdfLink": "https://drive.google.com/file/d/1Dr2tkjFvC9UJgfNzGmBxVtYhGs3cCzQ5/view?usp=drive_link"
+    },
+    {
+      "id": "n-1781053950136-qui5",
+      "date": "9 Juni",
+      "text": "Informasi Petunjuk Keringanan UKT",
+      "link": "",
+      "pdfLink": "https://drive.google.com/file/d/1SwH2Zpkv5MPVX73fvQ5uOmthCDKM4xBN/view?usp=sharing"
+    },
+    {
+      "id": "n-1779068734620-yu1m",
+      "date": "18 Mei",
+      "text": "Pendaftaran Beasiswa Djarum Foundation",
+      "link": "",
+      "pdfLink": "https://drive.google.com/file/d/1NUfl2LKF0k0sGXQfbxNJu_C7ATxV7rUY/view"
+    },
+    {
+      "id": "n-1776827359972-nbc7",
+      "date": "22 Apr",
+      "text": "Pendaftaran Beasiswa Yayasan Pelayanan Kasih A & A Rachmat",
+      "link": "",
+      "pdfLink": "https://drive.google.com/file/d/1wXUrAhyk3s3su-NZJqIwP_Q-7dIoXcgs/view"
+    }
+  ],
+  "updatedAt": "2026-07-03T01:14:15.490Z"
+}
