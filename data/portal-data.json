@@ -111,17 +111,6 @@
       "popupLabel": "Bagi Yang Akan/Sudah Sidang"
     },
     {
-      "id": "s1-0",
-      "slider": 1,
-      "tag": "Pengumuman",
-      "title": "Jam Layanan Akademik",
-      "desc": "Jam Layanan Operasional Akademik dan Kemahasiswaan Senin s.d Kamis, Jumat (WFH)",
-      "imageUrl": "/api/get-file?path=assets/images/1776060763449-0slide1.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets/images/1776060763449-0slide1.jpg",
-      "popupLabel": "Jam Layanan Akademik"
-    },
-    {
       "id": "s1-2",
       "slider": 1,
       "tag": "Informasi",
@@ -132,6 +121,17 @@
       "popupUrl": "/api/get-file?path=assets%2Fpdf%2F1782055970135-get-file.pdf",
       "popupLabel": "Info Wisuda",
       "hidden": false
+    },
+    {
+      "id": "s1-0",
+      "slider": 1,
+      "tag": "Pengumuman",
+      "title": "Jam Layanan Akademik",
+      "desc": "Jam Layanan Operasional Akademik dan Kemahasiswaan Senin s.d Kamis, Jumat (WFH)",
+      "imageUrl": "/api/get-file?path=assets/images/1776060763449-0slide1.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776060763449-0slide1.jpg",
+      "popupLabel": "Jam Layanan Akademik"
     },
     {
       "id": "sl-1776062471065-5fyk",
@@ -235,5 +235,5 @@
       "pdfLink": "https://drive.google.com/file/d/1wXUrAhyk3s3su-NZJqIwP_Q-7dIoXcgs/view"
     }
   ],
-  "updatedAt": "2026-07-03T01:14:15.490Z"
+  "updatedAt": "2026-07-06T04:39:24.850Z"
 }
