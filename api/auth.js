@@ -105,6 +105,15 @@ module.exports = async function handler(req, res) {
     }
 
     if (!usernameMatch || !hashMatch) {
+      // DEBUG SEMENTARA — hapus setelah masalah login selesai
+      console.error('[auth-debug]', {
+        usernameMatch,
+        submittedHashLength: submittedHash.length,
+        envHashLength: ADMIN_PASSWORD_HASH.length,
+        envHashHasWhitespace: /\s/.test(ADMIN_PASSWORD_HASH),
+        envUsernameLength: ADMIN_USERNAME.length,
+        envUsernameHasWhitespace: /\s/.test(ADMIN_USERNAME),
+      });
       // Tunda 400ms untuk mencegah brute-force
       await new Promise(r => setTimeout(r, 400));
       return res.status(401).json({ error: 'Username atau password salah.' });
