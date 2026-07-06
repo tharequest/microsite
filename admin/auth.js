@@ -1,112 +1,158 @@
-const SESSION_KEY = 'portal_auth_v3';
-async function serverLogin(username, password) {
+/**
+ * /api/auth.js — Vercel Serverless Auth Function
+ *
+ * POST /api/auth        → login, returns signed token
+ * GET  /api/auth        → verify token, returns session info
+ *
+ * Env variables yang WAJIB diset di Vercel Dashboard:
+ *   ADMIN_USERNAME        → username admin
+ *   ADMIN_PASSWORD_HASH   → SHA-256 hex dari password (lowercase)
+ *   SESSION_SECRET        → string random panjang (min 32 karakter)
+ *
+ * Cara buat hash: di browser console →
+ *   crypto.subtle.digest('SHA-256', new TextEncoder().encode('passwordmu'))
+ *     .then(b => console.log([...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')))
+ */
+
+const crypto = require('crypto');
+
+/* ── token helpers ─────────────────────────────────────────── */
+
+function signToken(username, expiresAt, secret) {
+  const payload = `${username}:${expiresAt}`;
+  const sig = crypto.createHmac('sha256', secret).update(payload).digest('hex');
+  return Buffer.from(`${payload}:${sig}`).toString('base64url');
+}
+
+function verifyToken(token, secret) {
   try {
-    const res = await fetch('/api/auth', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password })
-    });
-    const data = await res.json();
+    const decoded = Buffer.from(token, 'base64url').toString('utf-8');
+    const parts = decoded.split(':');
+    if (parts.length !== 3) return null;
 
-    if (!res.ok) {
-      return { ok: false, error: data.error || 'Login gagal.' };
-    }
+    const [username, expiresAtStr, sig] = parts;
+    const expiresAt = Number(expiresAtStr);
 
-    // Simpan token + info user ke sessionStorage
-    sessionStorage.setItem(SESSION_KEY, JSON.stringify({
-      token: data.token,
-      expiresAt: data.expiresAt,
-      username: data.user.username,
-      displayName: data.user.displayName,
-      role: data.user.role
-    }));
+    if (Date.now() > expiresAt) return null; // expired
 
-    return { ok: true, user: data.user };
-  } catch (err) {
-    return { ok: false, error: 'Koneksi ke server gagal. Coba lagi.' };
-  }
-}
+    const expected = crypto
+      .createHmac('sha256', secret)
+      .update(`${username}:${expiresAt}`)
+      .digest('hex');
 
-/**
- * Ambil sesi aktif dari sessionStorage (tanpa server call).
- * @returns {object|null}
- */
-function getSession() {
-  try {
-    const raw = sessionStorage.getItem(SESSION_KEY);
-    if (!raw) return null;
-    const session = JSON.parse(raw);
-    if (Date.now() > session.expiresAt) {
-      sessionStorage.removeItem(SESSION_KEY);
-      return null;
-    }
-    return session;
-  } catch { return null; }
-}
+    // Constant-time compare to prevent timing attacks
+    if (!crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected))) return null;
 
-/**
- * Ambil token Bearer untuk dipakai di API call.
- * @returns {string|null}
- */
-function getToken() {
-  const session = getSession();
-  return session ? session.token : null;
-}
-
-/**
- * Hapus sesi (logout).
- */
-function destroySession() {
-  sessionStorage.removeItem(SESSION_KEY);
-}
-
-/**
- * Guard: redirect ke login jika belum auth.
- * Juga verifikasi token ke server (async).
- * @returns {object|null} session jika valid
- */
-async function requireAuth() {
-  const session = getSession();
-  if (!session) {
-    sessionStorage.setItem('portal_redirect', window.location.pathname);
-    window.location.replace('login.html');
+    return { username, expiresAt };
+  } catch {
     return null;
   }
+}
 
-  // Verifikasi token ke server (opsional tapi lebih aman)
-  try {
-    const res = await fetch('/api/auth', {
-      headers: { Authorization: `Bearer ${session.token}` }
-    });
-    if (!res.ok) {
-      destroySession();
-      window.location.replace('login.html');
-      return null;
-    }
-  } catch {
-    // Jika offline, gunakan sesi lokal saja
+/* ── main handler ──────────────────────────────────────────── */
+
+module.exports = async function handler(req, res) {
+  // Security headers
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+
+  // CORS: hanya izinkan origin sendiri
+  const origin = req.headers.origin || '';
+  const allowedOrigins = (process.env.ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean);
+  if (allowedOrigins.length === 0 || allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin || '*');
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+  if (req.method === 'OPTIONS') return res.status(200).end();
+
+  const {
+    ADMIN_USERNAME,
+    ADMIN_PASSWORD_HASH,
+    SESSION_SECRET,
+  } = process.env;
+
+  if (!ADMIN_USERNAME || !ADMIN_PASSWORD_HASH || !SESSION_SECRET) {
+    console.error('[auth] ENV vars missing');
+    return res.status(500).json({ error: 'Server configuration error.' });
   }
 
-  return session;
-}
+  /* ── POST /api/auth — Login ── */
+  if (req.method === 'POST') {
+    const { username, password } = req.body || {};
 
-
-async function authFetch(url, options = {}) {
-  const token = getToken();
-  if (!token) throw new Error('Tidak ada token. Silakan login ulang.');
-  return fetch(url, {
-    ...options,
-    headers: {
-      ...(options.headers || {}),
-      Authorization: `Bearer ${token}`
+    if (!username || !password) {
+      return res.status(400).json({ error: 'Username dan password wajib diisi.' });
     }
-  });
-}
 
-// Expose ke global (dipakai oleh admin pages)
-window.serverLogin  = serverLogin;
-window.getSession   = getSession;
-window.getToken     = getToken;
-window.destroySession = destroySession;
-window.requireAuth  = requireAuth;
-window.authFetch    = authFetch;
+    // Hash password yang dikirim
+    const submittedHash = crypto
+      .createHash('sha256')
+      .update(password)
+      .digest('hex');
+
+    // Constant-time compare: cegah timing attack
+    const usernameMatch = username === ADMIN_USERNAME;
+    let hashMatch = false;
+    try {
+      hashMatch = crypto.timingSafeEqual(
+        Buffer.from(submittedHash),
+        Buffer.from(ADMIN_PASSWORD_HASH)
+      );
+    } catch {
+      hashMatch = false;
+    }
+
+    if (!usernameMatch || !hashMatch) {
+      // DEBUG SEMENTARA — hapus setelah masalah login selesai
+      console.error('[auth-debug]', {
+        usernameMatch,
+        submittedHashLength: submittedHash.length,
+        envHashLength: ADMIN_PASSWORD_HASH.length,
+        envHashHasWhitespace: /\s/.test(ADMIN_PASSWORD_HASH),
+        envUsernameLength: ADMIN_USERNAME.length,
+        envUsernameHasWhitespace: /\s/.test(ADMIN_USERNAME),
+      });
+      // Tunda 400ms untuk mencegah brute-force
+      await new Promise(r => setTimeout(r, 400));
+      return res.status(401).json({ error: 'Username atau password salah.' });
+    }
+
+    const SESSION_DURATION = 8 * 60 * 60 * 1000; // 8 jam
+    const expiresAt = Date.now() + SESSION_DURATION;
+    const token = signToken(username, expiresAt, SESSION_SECRET);
+
+    return res.status(200).json({
+      token,
+      expiresAt,
+      user: { username, displayName: 'Administrator', role: 'Super Admin' }
+    });
+  }
+
+  /* ── GET /api/auth — Verify Token ── */
+  if (req.method === 'GET') {
+    const authHeader = req.headers.authorization || '';
+    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+
+    if (!token) {
+      return res.status(401).json({ error: 'Token tidak ditemukan.' });
+    }
+
+    const session = verifyToken(token, SESSION_SECRET);
+    if (!session) {
+      return res.status(401).json({ error: 'Token tidak valid atau sudah expired.' });
+    }
+
+    return res.status(200).json({
+      valid: true,
+      user: { username: session.username, displayName: 'Administrator', role: 'Super Admin' },
+      expiresAt: session.expiresAt
+    });
+  }
+
+  return res.status(405).json({ error: 'Method not allowed.' });
+};
+
+/* ── Helper yang bisa diimpor oleh API lain ── */
+module.exports.verifyToken = verifyToken;
