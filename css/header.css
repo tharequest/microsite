@@ -1,3 +1,9 @@
+/*
+ * header.css — Lens.xyz style
+ * Initial: full-width, clean white bar
+ * Scrolled (>80px): floating pill, subtle shadow
+ * NO backdrop-filter = ringan / fast
+ */
 
 :root {
   --hdr-blue:      #2589e9;
@@ -210,9 +216,7 @@ header.scrolled .nav-item { font-size: 12px; padding: 5px 9px; }
   border: 1px solid var(--border, #e5e7eb);
   border-radius: 16px; padding: 10px 0 14px;
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-  z-index: 2000; pointer-events: all;
-  max-height: calc(100dvh - 100px);
-  overflow-y: auto;
+  z-index: 999; pointer-events: all;
   animation: slideDown .25s cubic-bezier(0.4,0,0.2,1) both;
 }
 @keyframes slideDown {

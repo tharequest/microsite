@@ -1,5 +1,5 @@
 /**
- * /api/auth.js - Vercel Serverless Auth Function
+ * /api/auth.js — Vercel Serverless Auth Function
  *
  * POST /api/auth        → login, returns signed token
  * GET  /api/auth        → verify token, returns session info
@@ -78,7 +78,7 @@ module.exports = async function handler(req, res) {
     return res.status(500).json({ error: 'Server configuration error.' });
   }
 
-  /* ── POST /api/auth  Login ── */
+  /* ── POST /api/auth — Login ── */
   if (req.method === 'POST') {
     const { username, password } = req.body || {};
 
@@ -121,7 +121,7 @@ module.exports = async function handler(req, res) {
     });
   }
 
-  /* ── GET /api/auth Verify Token ── */
+  /* ── GET /api/auth — Verify Token ── */
   if (req.method === 'GET') {
     const authHeader = req.headers.authorization || '';
     const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;

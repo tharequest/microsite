@@ -9,7 +9,7 @@ module.exports = async function handler(req, res) {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'DENY');
 
-  // CORS - izinkan semua origin (API key aman di server)
+  // CORS — izinkan semua origin (API key aman di server)
   res.setHeader('Access-Control-Allow-Origin', '*');
 
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');

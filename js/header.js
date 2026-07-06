@@ -1,3 +1,9 @@
+/**
+ * header.js
+ * Glassmorphism header dengan scroll shrink ke floating pill
+ */
+
+// ── Scroll: tambah/hapus class .scrolled ──
 (function initScrollHeader() {
   const header = document.querySelector('header');
   if (!header) return;
@@ -26,9 +32,6 @@ function initHamburger() {
     e.stopPropagation();
     ham.classList.toggle('open');
     nav.classList.toggle('open');
-    /* Tandai body saat menu mobile terbuka, dipakai kirana-search.css
-       untuk menyembunyikan Kirana bar agar tidak tumpang tindih */
-    document.body.classList.toggle('mobile-nav-open', nav.classList.contains('open'));
   });
 
   // Tutup saat klik link
@@ -36,7 +39,6 @@ function initHamburger() {
     link.addEventListener('click', () => {
       ham.classList.remove('open');
       nav.classList.remove('open');
-      document.body.classList.remove('mobile-nav-open');
     });
   });
 
@@ -45,7 +47,6 @@ function initHamburger() {
     if (!ham.contains(e.target) && !nav.contains(e.target)) {
       ham.classList.remove('open');
       nav.classList.remove('open');
-      document.body.classList.remove('mobile-nav-open');
     }
   });
 }

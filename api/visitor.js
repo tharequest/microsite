@@ -1,5 +1,5 @@
 /**
- * /api/visitor.js - Visitor Counter dengan Upstash Redis
+ * /api/visitor.js — Visitor Counter dengan Upstash Redis
  * GET         → baca statistik (publik)
  * POST        → increment counter pengunjung (publik)
  * POST + auth → override/edit angka manual dari admin

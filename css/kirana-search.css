@@ -415,14 +415,6 @@
   .kirana-bar-avatar  { width: 30px; height: 30px; }
 }
 
-/* ══ FIX: Kirana bar tumpang tindih dengan menu mobile ══════════
-   Saat hamburger menu dibuka (body.mobile-nav-open dari header.js),
-   sembunyikan total Kirana bar supaya tidak ketiban/menutupi
-   isi menu mobile yang panjang. ══════════════════════════════════ */
-body.mobile-nav-open .kirana-bar {
-  display: none !important;
-}
-
 /* ══════════════════════════════════════════════════════════════
    PATCH: Fix overlay chat di mobile — max-height bawah header
    Tambahkan ke css/ai-search.css
@@ -501,14 +493,6 @@ body.mobile-nav-open .kirana-bar {
 
 .kirana-bubble-hint.visible {
   opacity: 1;
-}
-
-/* ══ Sembunyikan bubble hint di mobile — sering kepotong/overflow
-   di layar sempit, jadi cukup avatar + input bar saja yang tampil ══ */
-@media (max-width: 768px) {
-  .kirana-bubble-hint {
-    display: none !important;
-  }
 }
 
 .kirana-bubble-hint-text {

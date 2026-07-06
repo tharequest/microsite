@@ -3,36 +3,27 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-  <title>Microsite Akademik & Kemahasiswaan-FMIPA Untan</title>
+  <title>Akademik & Kemahasiswaan – FMIPA Untan</title>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600&display=swap" rel="stylesheet"/>
-  <!-- Google Material Symbols — dipakai untuk ikon card Akses Cepat Layanan -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0"/>
-  <style>
-    /* Boilerplate resmi Google — wajib ada agar Material Symbols render benar */
-    .material-symbols-outlined {
-      font-family: 'Material Symbols Outlined';
-      font-weight: normal;
-      font-style: normal;
-      font-size: 26px;
-      line-height: 1;
-      letter-spacing: normal;
-      text-transform: none;
-      display: inline-block;
-      white-space: nowrap;
-      word-wrap: normal;
-      direction: ltr;
-      -webkit-font-feature-settings: 'liga';
-      -webkit-font-smoothing: antialiased;
-    }
-  </style>
   <link rel="icon" type="image/png" href="/assets/images/logologin.png">
   <!-- CSS MODULAR — JANGAN load style.css lama! -->
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/header.css"/>
+  <link rel="stylesheet" href="css/slider.css"/>
+  <link rel="stylesheet" href="css/popup.css"/>
+  <link rel="stylesheet" href="css/content.css"/>
+  <link rel="stylesheet" href="css/footer.css"/>
+  <link rel="stylesheet" href="css/kirana-search.css"/>
+  <link rel="stylesheet" href="css/layanan-popup.css"/>
+  <link rel="stylesheet" href="css/kontak.css">
 </head>
 <body>
 
 <header>
   <div class="header-inner">
 
+    <!-- Brand: 3 logo + garis pemisah + teks portal -->
     <a href="index.html" class="brand">
 
       <!-- 3 logo institusi -->
@@ -43,10 +34,10 @@
       <!-- Garis pemisah -->
       <div class="logo-divider"></div>
 
-      <!-- Nama microsite -->
+      <!-- Nama portal -->
       <div class="brand-text">
         <span class="label">FMIPA Untan</span>
-        <span class="name">Info Akademik & Kemahasiswaan</span>
+        <span class="name">Akademik & Kemahasiswaan</span>
       </div>
 
     </a>
@@ -57,6 +48,66 @@
   <nav class="main-nav">
   <a href="index.html" class="active">Beranda</a>
 
+  <!-- INFO PENTING -->
+  <div class="nav-item dropdown">
+    <span>Info Penting ▾</span>
+    <div class="dropdown-menu">
+      <a onclick="openPopup({
+          popupType:'pdf',
+          popupUrl:'https://drive.google.com/uc?export=download&id=14HAQ4UAs_QiSS4Zg0e2M3q1CsHX7zGbX',
+          title:'Pedoman Akademik'
+          })">Pedoman Akademik</a>
+
+      <a onclick="openPopup({
+          popupType:'pdf',
+          popupUrl:'https://drive.google.com/uc?export=download&id=1iCfmCHktV68lQ2HEw2C1qkhbFnbB5E71',
+          title:'Kalender Akademik'
+          })">Kalender Akademik</a>
+      
+      <a onclick="openPopup({
+          popupType:'pdf',
+          popupUrl:'https://drive.google.com/uc?export=download&id=1c093F5EznNhtH_48ZbrsTDRILkvxVBnM',
+          title:'Kode Etik Untan'
+          })">Kode Etik Untan</a>
+
+      <a onclick="openPopup({
+          popupType:'pdf',
+          popupUrl:'https://drive.google.com/uc?export=download&id=1iE5rlnfnTdvad4svmKDW1QyZXXh7JRkD',
+          title:'Edaran PISN'
+          })">Edaran PISN</a>
+
+      <a onclick="openPopup({
+          popupType:'pdf',
+          popupUrl:'https://drive.google.com/uc?export=download&id=10G0cmbmU1_Fjn3m1SRmLUIzJ3VEdRjK4',
+          title:'Perbaikan Data PDDIKTI'
+          })">Perbaikan Data PDDIKTI</a>
+
+      <a onclick="openPopup({
+          popupType:'pdf',
+          popupUrl:'https://drive.google.com/uc?export=download&id=1fV2sJh5zzpKd65WZ5_2XY2woL0shd-GH',
+          title:'Prosedur Pengajuan Cuti'
+          })">Prosedur Pengajuan Cuti</a>
+    </div>
+  </div>
+
+  <!-- DOWNLOAD -->
+  <div class="nav-item dropdown">
+    <span>Download ▾</span>
+    <div class="dropdown-menu">
+      <a onclick="openPopup({
+          popupType:'pdf',
+          popupUrl:'https://drive.google.com/uc?export=download&id=1mNeuaIv-AsfNzMgqRului4uO5otE6Vbg',
+          title:'Akreditasi UNTAN'
+          })">Akreditasi UNTAN</a>
+      <a href="https://docs.google.com/document/d/1QQFK0vpB2VYwZN9XRjxiJWRfck6HUCTu/edit" 
+      target="_blank"rel="noopener noreferrer">Draft Syarat Sidang</a>
+      <a href="https://docs.google.com/document/d/10O5ifI5A3WheOjYs9ZWEKtOAe9NsoB7r/edit" 
+      target="_blank"rel="noopener noreferrer">Draft Bebas Laboratorium</a>
+    </div>
+  </div>
+
+<!--Ceksurat-->
+ <a href="ceksurat.html">Cek Surat</a>
 <!--Kontak-->  
   <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
 
@@ -75,7 +126,72 @@
 
   <a href="index.html">Beranda</a>
 
+  <!-- INFO PENTING -->
+  <div class="mobile-dropdown">
+    <div class="mobile-title">Info Penting</div>
+
+    <a onclick="openPopup({
+      popupType:'pdf',
+      popupUrl:'https://drive.google.com/uc?export=download&id=14HAQ4UAs_QiSS4Zg0e2M3q1CsHX7zGbX',
+      title:'Pedoman Akademik'
+    })">Pedoman Akademik</a>
+
+    <a onclick="openPopup({
+      popupType:'pdf',
+      popupUrl:'https://drive.google.com/uc?export=download&id=1iCfmCHktV68lQ2HEw2C1qkhbFnbB5E71',
+      title:'Kalender Akademik'
+    })">Kalender Akademik</a>
+
+    <a onclick="openPopup({
+      popupType:'pdf',
+      popupUrl:'https://drive.google.com/uc?export=download&id=1c093F5EznNhtH_48ZbrsTDRILkvxVBnM',
+      title:'Kode Etik Untan'
+    })">Kode Etik Untan</a>
+
+    <a onclick="openPopup({
+      popupType:'pdf',
+      popupUrl:'https://drive.google.com/uc?export=download&id=1iE5rlnfnTdvad4svmKDW1QyZXXh7JRkD',
+      title:'Edaran PISN'
+    })">Edaran PISN</a>
+
+    <a onclick="openPopup({
+      popupType:'pdf',
+      popupUrl:'https://drive.google.com/uc?export=download&id=10G0cmbmU1_Fjn3m1SRmLUIzJ3VEdRjK4',
+      title:'Perbaikan Data PDDIKTI'
+    })">Perbaikan Data PDDIKTI</a>
+
+    <a onclick="openPopup({
+      popupType:'pdf',
+      popupUrl:'https://drive.google.com/uc?export=download&id=1fV2sJh5zzpKd65WZ5_2XY2woL0shd-GH',
+      title:'Prosedur Pengajuan Cuti'
+    })">Prosedur Pengajuan Cuti</a>
+
+  </div>
+
+  <!-- DOWNLOAD -->
+  <div class="mobile-dropdown">
+    <div class="mobile-title">Download</div>
+
+    <a onclick="openPopup({
+      popupType:'pdf',
+      popupUrl:'https://drive.google.com/uc?export=download&id=1mNeuaIv-AsfNzMgqRului4uO5otE6Vbg',
+      title:'Akreditasi UNTAN'
+    })">Akreditasi UNTAN</a>
+
+    <a href="https://docs.google.com/document/d/1QQFK0vpB2VYwZN9XRjxiJWRfck6HUCTu/edit"
+       target="_blank" rel="noopener noreferrer">
+       Draft Syarat Sidang
+    </a>
+
+    <a href="https://docs.google.com/document/d/10O5ifI5A3WheOjYs9ZWEKtOAe9NsoB7r/edit"
+       target="_blank" rel="noopener noreferrer">
+       Draft Bebas Laboratorium
+    </a>
+
+  </div>
   <!-- Menu lain di mobile-->
+  <a href="ceksurat.html">Cek Surat</a>
+  
   <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
 
   <!-- <a href="https://xandria.pduntan.id/login" target="_blank">Bioijazah</a>
@@ -112,61 +228,25 @@
     <div class="line"></div>
   </div>
   <div class="quick-grid">
-    <a href="https://mipa.untan.ac.id/" target="_blank" rel="noopener noreferrer" class="quick-card">
-      <div class="quick-icon" style="background:#f4f7fb;">
-        <img src="assets/images/logologin.png" alt="Logo FMIPA Untan" style="width:30px;height:30px;object-fit:contain;">
-      </div>
-      <h4>Website FMIPA Untan</h4>
-      <p>Profil Fakultas, Pilihan Program Studi, Berita terbaru Fakultas</p>
-    </a>
     <a id="btn-jenis-layanan" href="#" class="quick-card" onclick="return false;">
-      <div class="quick-icon" style="background:#e8f0fd;">
-        <span class="material-symbols-outlined" style="color:#1a4f8a;">assignment</span>
-      </div>
+      <div class="quick-icon" style="background:#e8f0fd;">📋</div>
       <h4>Jenis Layanan</h4>
       <p>Lihat semua jenis layanan akademik dan administrasi</p>
     </a>
-    <a id="btn-info-penting" href="#" class="quick-card" onclick="return false;">
-      <div class="quick-icon" style="background:#eeedfe;">
-        <span class="material-symbols-outlined" style="color:#3c3489;">push_pin</span>
-      </div>
-      <h4>Info Penting</h4>
-      <p>Prosedur Cuti, Edaran PISN, Perbaikan DATA PDDIKTI dan edaran resmi lainnya</p>
-    </a>
-    <a id="btn-download" href="#" class="quick-card" onclick="return false;">
-      <div class="quick-icon" style="background:#fef3e2;">
-        <span class="material-symbols-outlined" style="color:#854f0b;">download</span>
-      </div>
-      <h4>Download</h4>
-      <p>Berkas Syarat Sidang, Bebas Laboratorium Terbaru, dan dokumen lainnya</p>
-    </a>
-    <a href="ceksurat.html" class="quick-card">
-      <div class="quick-icon" style="background:#fce8f3;">
-        <span class="material-symbols-outlined" style="color:#993556;">mail</span>
-      </div>
-      <h4>Cek Surat</h4>
-      <p>Lacak status surat (Aktif, Cuti, Pindah Kuliah), Pengunduran diri dan Izin Kegiatan</p>
-    </a>
     <a href="https://xandria.pduntan.id/login" target="_blank" rel="noopener noreferrer" class="quick-card">
-      <div class="quick-icon" style="background:#fef3e2;">
-        <span class="material-symbols-outlined" style="color:#854f0b;">school</span>
-      </div>
+      <div class="quick-icon" style="background:#fef3e2;">🎓</div>
       <h4>Bio Ijazah</h4>
-      <p>Situs Verifikasi dan cetak biodata mahasiswa untan resmi</p>
+      <p>Verifikasi dan cetak biodata ijazah resmi</p>
     </a>
     <a href="https://satu.untan.ac.id/gate/login" target="_blank" rel="noopener noreferrer" class="quick-card">
-      <div class="quick-icon" style="background:#e6f7f0;">
-        <span class="material-symbols-outlined" style="color:#0f6e56;">account_balance</span>
-      </div>
+      <div class="quick-icon" style="background:#e6f7f0;">🏛️</div>
       <h4>Satu UNTAN</h4>
-      <p>Portal terpadu sistem informasi universitas Tanjungpura</p>
-    </a>  
-    <a href="https://sekarfmipa.vercel.app/" class="quick-card">
-      <div class="quick-icon" style="background:#f4f7fb;">
-        <img src="assets/images/sekar-logo.png" alt="Logo SEKAR" style="width:30px;height:30px;object-fit:contain;">
-      </div>
-      <h4>Informasi Ruangan</h4>
-      <p>Cari informasi ketersediaan ruangan kelas FMIPA Untan</p>
+      <p>Portal terpadu sistem informasi universitas</p>
+    </a>
+    <a href="ceksurat.html" class="quick-card">
+      <div class="quick-icon" style="background:#fce8f3;">✉️</div>
+      <h4>Cek Surat</h4>
+      <p>Lacak status surat dan dokumen resmi</p>
     </a>
   </div>
 </section>
@@ -201,8 +281,8 @@
     </div>
 
     <!-- Statistik Pengunjung -->
-    <!-- <div class="info-card stat-card-wrap">
-      <div class="card-title"><span>🌐</span> Statistik kunjungan</div>
+    <div class="info-card stat-card-wrap">
+      <div class="card-title"><span>🌐</span> Statistik Pengunjung Portal</div>
       <div class="stat-grid-new">
         <div class="stat-item-new" style="--sc:#eff6ff;--cc:#1d4ed8;">
           <div class="stat-icon-new">📅</div>
@@ -233,7 +313,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
   </div>
 </section>
@@ -298,7 +378,7 @@
 
   <div class="footer-bottom">
     <span>© 2026 <a href="https://www.instagram.com/kaum.surya/" target="_blank" rel="noopener noreferrer">Akademik &amp; Kemahasiswaan FMIPA Untan</a></span>
-    <span class="footer-badge">✨ microsite v3.0</span>
+    <span class="footer-badge">✨ Portal v3.0</span>
   </div>
 </footer>
 
@@ -403,64 +483,6 @@
   </div>
 </div>
 
-<!-- ═══ Popup Info Penting (reuse class lp- dari layanan-popup.css) ═══ -->
-<div class="lp-overlay" id="ip-overlay">
-  <div class="lp-modal">
-    <div class="lp-header">
-      <div class="lp-header-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="12" y1="8" x2="12" y2="12"/>
-          <line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-      </div>
-      <div>
-        <div class="lp-header-title">Info Penting</div>
-        <div class="lp-header-sub">Pedoman dan edaran resmi FMIPA Untan</div>
-      </div>
-      <button class="lp-close" onclick="closeInfoPentingPopup()">✕</button>
-    </div>
-    <div class="lp-search-wrap">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="ip-search" placeholder="Cari info..." oninput="idpFilter('ip', INFO_PENTING_DATA, this.value)"/>
-    </div>
-    <div class="lp-list" id="ip-list"></div>
-    <div class="lp-footer">
-      <span id="ip-count">6 dokumen</span>
-      <span class="lp-badge">Info Penting</span>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ Popup Download (reuse class lp- dari layanan-popup.css) ═══ -->
-<div class="lp-overlay" id="dl-overlay">
-  <div class="lp-modal">
-    <div class="lp-header">
-      <div class="lp-header-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-      </div>
-      <div>
-        <div class="lp-header-title">Download</div>
-        <div class="lp-header-sub">Berkas dan dokumen unduhan</div>
-      </div>
-      <button class="lp-close" onclick="closeDownloadPopup()">✕</button>
-    </div>
-    <div class="lp-search-wrap">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="dl-search" placeholder="Cari dokumen..." oninput="idpFilter('dl', DOWNLOAD_DATA, this.value)"/>
-    </div>
-    <div class="lp-list" id="dl-list"></div>
-    <div class="lp-footer">
-      <span id="dl-count">3 dokumen</span>
-      <span class="lp-badge">Unduhan</span>
-    </div>
-  </div>
-</div>
-
 <!-- ═══ Popup Kontak di Header ═══════════════════════════════════ -->
 <div id="kt-overlay" class="kt-overlay">
   <div class="kt-modal">
@@ -483,7 +505,17 @@
 </div>
 
 <!-- JS — urutan load penting! -->
+<script src="js/kontak.js"></script>
+<script src="js/store.js"></script>
+<script src="js/header.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/news.js"></script>
+<script src="js/kb.js"></script>
+<script src="js/kirana-search.js"></script>
+<script src="js/app.js"></script>
+<script src="js/layanan-popup.js"></script>
+<script src="js/stats.js"></script>
 
-<script type="module" src="/src/entry-index.js"></script>
 </body>
 </html>

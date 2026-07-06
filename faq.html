@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-  <title>FAQ - FMIPA UNTAN</title>
+  <title>FAQ – FMIPA UNTAN</title>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600&display=swap" rel="stylesheet"/>
   <link rel="icon" type="image/png" href="/assets/images/logologin.png">
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/header.css"/>
+  <link rel="stylesheet" href="css/footer.css"/>
+  <link rel="stylesheet" href="css/kontak.css"/>
+  <link rel="stylesheet" href="css/popup.css"/>
+  <link rel="stylesheet" href="css/layanan-popup.css"/>
 
   <style>
     /* ── PAGE WRAPPER ── */
@@ -253,12 +260,34 @@
       <div class="logo-divider"></div>
       <div class="brand-text">
         <span class="label">FMIPA Untan</span>
-        <span class="name">Info Akademik & Kemahasiswaan</span>
+        <span class="name">Akademik & Kemahasiswaan</span>
       </div>
     </a>
     <div class="header-spacer"></div>
     <nav class="main-nav">
       <a href="index.html">Beranda</a>
+
+      <div class="nav-item dropdown">
+        <span>Info Penting ▾</span>
+        <div class="dropdown-menu">
+          <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=14HAQ4UAs_QiSS4Zg0e2M3q1CsHX7zGbX',title:'Pedoman Akademik'})">Pedoman Akademik</a>
+          <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1iCfmCHktV68lQ2HEw2C1qkhbFnbB5E71',title:'Kalender Akademik'})">Kalender Akademik</a>
+          <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1c093F5EznNhtH_48ZbrsTDRILkvxVBnM',title:'Kode Etik Untan'})">Kode Etik Untan</a>
+          <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1iE5rlnfnTdvad4svmKDW1QyZXXh7JRkD',title:'Edaran PISN'})">Edaran PISN</a>
+          <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=10G0cmbmU1_Fjn3m1SRmLUIzJ3VEdRjK4',title:'Perbaikan Data PDDIKTI'})">Perbaikan Data PDDIKTI</a>
+          <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1fV2sJh5zzpKd65WZ5_2XY2woL0shd-GH',title:'Prosedur Pengajuan Cuti'})">Prosedur Pengajuan Cuti</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <span>Download ▾</span>
+        <div class="dropdown-menu">
+          <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1mNeuaIv-AsfNzMgqRului4uO5otE6Vbg',title:'Akreditasi UNTAN'})">Akreditasi UNTAN</a>
+          <a href="https://docs.google.com/document/d/1QQFK0vpB2VYwZN9XRjxiJWRfck6HUCTu/edit" target="_blank" rel="noopener noreferrer">Draft Syarat Sidang</a>
+          <a href="https://docs.google.com/document/d/10O5ifI5A3WheOjYs9ZWEKtOAe9NsoB7r/edit" target="_blank" rel="noopener noreferrer">Draft Bebas Laboratorium</a>
+        </div>
+      </div>
+
       <a href="ceksurat.html">Cek Surat</a>
       <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
     </nav>
@@ -270,6 +299,21 @@
 
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html">Beranda</a>
+    <div class="mobile-dropdown">
+      <div class="mobile-title">Info Penting</div>
+      <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=14HAQ4UAs_QiSS4Zg0e2M3q1CsHX7zGbX',title:'Pedoman Akademik'})">Pedoman Akademik</a>
+      <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1iCfmCHktV68lQ2HEw2C1qkhbFnbB5E71',title:'Kalender Akademik'})">Kalender Akademik</a>
+      <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1c093F5EznNhtH_48ZbrsTDRILkvxVBnM',title:'Kode Etik Untan'})">Kode Etik Untan</a>
+      <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1iE5rlnfnTdvad4svmKDW1QyZXXh7JRkD',title:'Edaran PISN'})">Edaran PISN</a>
+      <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=10G0cmbmU1_Fjn3m1SRmLUIzJ3VEdRjK4',title:'Perbaikan Data PDDIKTI'})">Perbaikan Data PDDIKTI</a>
+      <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1fV2sJh5zzpKd65WZ5_2XY2woL0shd-GH',title:'Prosedur Pengajuan Cuti'})">Prosedur Pengajuan Cuti</a>
+    </div>
+    <div class="mobile-dropdown">
+      <div class="mobile-title">Download</div>
+      <a onclick="openPopup({popupType:'pdf',popupUrl:'https://drive.google.com/uc?export=download&id=1mNeuaIv-AsfNzMgqRului4uO5otE6Vbg',title:'Akreditasi UNTAN'})">Akreditasi UNTAN</a>
+      <a href="https://docs.google.com/document/d/1QQFK0vpB2VYwZN9XRjxiJWRfck6HUCTu/edit" target="_blank" rel="noopener noreferrer">Draft Syarat Sidang</a>
+      <a href="https://docs.google.com/document/d/10O5ifI5A3WheOjYs9ZWEKtOAe9NsoB7r/edit" target="_blank" rel="noopener noreferrer">Draft Bebas Laboratorium</a>
+    </div>
     <a href="ceksurat.html">Cek Surat</a>
     <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
   </div>
@@ -384,7 +428,7 @@
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          Pedoman Akademik tersedia di card <strong>Info Penting</strong> pada halaman utama (bagian Akses Cepat Layanan). Dokumen ini merupakan sumber resmi dari Universitas Tanjungpura yang memuat aturan akademik, kurikulum, dan tata tertib mahasiswa.
+          Pedoman Akademik tersedia di menu <strong>Info Penting → Pedoman Akademik</strong> di navbar. Dokumen ini merupakan sumber resmi dari Universitas Tanjungpura yang memuat aturan akademik, kurikulum, dan tata tertib mahasiswa.
         </div>
       </div>
     </div>
@@ -397,7 +441,7 @@
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          Kalender Akademik dapat diakses melalui card <strong>Info Penting</strong> di halaman utama. Kalender ini bersumber resmi dari Universitas Tanjungpura dan memuat jadwal penting seperti awal/akhir semester, ujian, dan libur akademik.
+          Kalender Akademik dapat diakses melalui menu <strong>Info Penting → Kalender Akademik</strong>. Kalender ini bersumber resmi dari Universitas Tanjungpura dan memuat jadwal penting seperti awal/akhir semester, ujian, dan libur akademik.
         </div>
       </div>
     </div>
@@ -410,7 +454,7 @@
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          Prosedur cuti kuliah dapat dilihat di card <strong>Info Penting</strong> pada halaman utama. Secara umum, pengajuan dilakukan melalui formulir online di menu Jenis Layanan, dengan melampirkan dokumen pendukung yang diperlukan sesuai ketentuan FMIPA Untan.
+          Prosedur cuti kuliah dapat dilihat di <strong>Info Penting → Prosedur Pengajuan Cuti</strong>. Secara umum, pengajuan dilakukan melalui formulir online di menu Jenis Layanan, dengan melampirkan dokumen pendukung yang diperlukan sesuai ketentuan FMIPA Untan.
         </div>
       </div>
     </div>
@@ -423,7 +467,7 @@
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          Panduan perbaikan data PDDIKTI tersedia di card <strong>Info Penting</strong> pada halaman utama. Dokumen ini disusun berdasarkan ketentuan dari Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek) / Kementerian Diktisaintek. Untuk proses perbaikan, mahasiswa perlu menghubungi bagian akademik secara langsung.
+          Panduan perbaikan data PDDIKTI tersedia di <strong>Info Penting → Perbaikan Data PDDIKTI</strong>. Dokumen ini disusun berdasarkan ketentuan dari Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek) / Kementerian Diktisaintek. Untuk proses perbaikan, mahasiswa perlu menghubungi bagian akademik secara langsung.
         </div>
       </div>
     </div>
@@ -441,7 +485,7 @@
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          Draft syarat sidang dapat diunduh melalui card <strong>Download</strong> pada halaman utama. Dokumen ini memuat persyaratan administratif dan akademik yang harus dipenuhi sebelum mendaftar sidang.
+          Draft syarat sidang dapat diunduh melalui menu <strong>Download → Draft Syarat Sidang</strong>. Dokumen ini memuat persyaratan administratif dan akademik yang harus dipenuhi sebelum mendaftar sidang.
         </div>
       </div>
     </div>
@@ -454,7 +498,7 @@
       </div>
       <div class="faq-a">
         <div class="faq-a-inner">
-          Formulir dan panduan bebas laboratorium tersedia di card <strong>Download</strong> pada halaman utama. Prosedur ini biasanya menjadi salah satu syarat pengajuan sidang dan wisuda.
+          Formulir dan panduan bebas laboratorium tersedia di menu <strong>Download → Draft Bebas Laboratorium</strong>. Prosedur ini biasanya menjadi salah satu syarat pengajuan sidang dan wisuda.
         </div>
       </div>
     </div>
@@ -594,8 +638,6 @@
         <li><a href="https://xandria.pduntan.id/login" target="_blank" rel="noopener noreferrer">Bio Ijazah</a></li>
         <li><a href="https://satu.untan.ac.id/gate/login" target="_blank" rel="noopener noreferrer">Satu UNTAN</a></li>
         <li><a href="ceksurat.html">Cek Surat</a></li>
-        <li><a href="#" onclick="openInfoPentingPopup(); return false;">Info Penting</a></li>
-        <li><a href="#" onclick="openDownloadPopup(); return false;">Download</a></li>
       </ul>
     </div>
 
@@ -675,64 +717,10 @@
   </div>
 </div>
 
-<!-- ═══ Popup Info Penting (reuse class lp- dari layanan-popup.css) ═══ -->
-<div class="lp-overlay" id="ip-overlay">
-  <div class="lp-modal">
-    <div class="lp-header">
-      <div class="lp-header-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="12" y1="8" x2="12" y2="12"/>
-          <line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-      </div>
-      <div>
-        <div class="lp-header-title">Info Penting</div>
-        <div class="lp-header-sub">Pedoman dan edaran resmi FMIPA Untan</div>
-      </div>
-      <button class="lp-close" onclick="closeInfoPentingPopup()">✕</button>
-    </div>
-    <div class="lp-search-wrap">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="ip-search" placeholder="Cari info..." oninput="idpFilter('ip', INFO_PENTING_DATA, this.value)"/>
-    </div>
-    <div class="lp-list" id="ip-list"></div>
-    <div class="lp-footer">
-      <span id="ip-count">6 dokumen</span>
-      <span class="lp-badge">Info Penting</span>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ Popup Download (reuse class lp- dari layanan-popup.css) ═══ -->
-<div class="lp-overlay" id="dl-overlay">
-  <div class="lp-modal">
-    <div class="lp-header">
-      <div class="lp-header-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-      </div>
-      <div>
-        <div class="lp-header-title">Download</div>
-        <div class="lp-header-sub">Berkas dan dokumen unduhan</div>
-      </div>
-      <button class="lp-close" onclick="closeDownloadPopup()">✕</button>
-    </div>
-    <div class="lp-search-wrap">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="dl-search" placeholder="Cari dokumen..." oninput="idpFilter('dl', DOWNLOAD_DATA, this.value)"/>
-    </div>
-    <div class="lp-list" id="dl-list"></div>
-    <div class="lp-footer">
-      <span id="dl-count">3 dokumen</span>
-      <span class="lp-badge">Unduhan</span>
-    </div>
-  </div>
-</div>
-
+<script src="js/kontak.js"></script>
+<script src="js/header.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/layanan-popup.js"></script>
 
 <script>
 /* ── FAQ Accordion ── */
@@ -803,6 +791,5 @@ function filterFAQ(val) {
 }
 </script>
 
-<script type="module" src="/src/entry-faq.js"></script>
 </body>
 </html>

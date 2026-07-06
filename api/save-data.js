@@ -1,5 +1,5 @@
 /**
- * /api/save-data.js - Vercel Serverless Function
+ * /api/save-data.js — Vercel Serverless Function
  * GET  → baca data portal-data.json dari GitHub (publik)
  * POST → simpan data (✅ Dilindungi: wajib Bearer token)
  */
@@ -33,7 +33,7 @@ module.exports = async function handler(req, res) {
     'X-GitHub-Api-Version': '2022-11-28'
   };
 
-  // ── GET - publik, tidak perlu auth ──────────────────────────
+  // ── GET — publik, tidak perlu auth ──────────────────────────
   if (req.method === 'GET') {
     try {
       const ghRes = await fetch(apiUrl, { headers: ghHeaders });
@@ -50,7 +50,7 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  // ── POST - wajib auth ────────────────────────────────────────
+  // ── POST — wajib auth ────────────────────────────────────────
   if (req.method === 'POST') {
     // 🔒 Auth guard
     if (!requireAuth(req, res)) return;
