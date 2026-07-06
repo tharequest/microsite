@@ -24,7 +24,7 @@ const KIRANA_KB = [
   {
     id: 'cek_surat',
     answer:
-      'Cek status surat di halaman Cek Surat portal: ac-fmipa-portal.vercel.app/ceksurat.html\n' +
+      'Cek status surat di halaman Cek Surat portal: infobakmipa.vercel.app/ceksurat.html\n' +
       'Masukkan Nama atau NIM, pilih Himpunan, pilih jenis surat, klik Cari.',
   },
 
@@ -35,7 +35,7 @@ const KIRANA_KB = [
       '1. Buka portal → klik "Jenis Layanan" → pilih jenis surat → isi Google Form → submit\n' +
       '   ATAU scan barcode/QR di slider portal pakai HP\n' +
       '2. Tunggu 1–2 hari kerja (isi pagi → sore bisa jadi)\n' +
-      '3. Pantau status di: ac-fmipa-portal.vercel.app/ceksurat.html\n' +
+      '3. Pantau status di: infobakmipa.vercel.app/ceksurat.html\n' +
       '4. Jika status belum muncul, hubungi bagian akademik sesuai jenis surat (lihat di bawah)\n\n' +
       'Tidak perlu datang ke kantor. Semua online.\n\n' +
       'LINK GOOGLE FORM:\n' +
@@ -224,7 +224,7 @@ const KIRANA_KB = [
     answer:
       'Tracer Study FMIPA Untan sedang dalam pengembangan (progress ~35%).\n' +
       'Platform pelacakan karir alumni. Target launch: September 2026.\n' +
-      'Info: ac-fmipa-portal.vercel.app/tracer-study.html',
+      'Info: infobakmipa.vercel.app/tracer-study.html',
   },
 
   /* ── Identitas Pembuat ── */

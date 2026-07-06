@@ -11,11 +11,12 @@ Nama Lengkap  : Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)
 Universitas   : Universitas Tanjungpura (Untan), Pontianak, Kalimantan Barat
 
 SUMBER DATA UTAMA:
-1. Portal terbaru : https://ac-fmipa-portal.vercel.app
+1. Portal terbaru : https://infobakmipa.vercel.app
 2. Mirror portal  : https://portalmipa.vercel.app
 3. SEKAR ruangan  : https://sekarfmipa.vercel.app
 4. Universitas    : https://untan.ac.id
-⚠️ mipa.untan.ac.id jarang diupdate — arahkan ke ac-fmipa-portal.vercel.app.
+5. Website resmi fakultas : https://mipa.untan.ac.id
+6. mipa.untan.ac.id info lebih lengkap dan terupdate — arahkan ke website resmi fakultas MIPA.
 
 PROGRAM STUDI S-1: Matematika, Fisika, Kimia, Biologi, Siskom, Ilmu Kelautan,
 Sisfo, Statistika, Geofisika. S-2: Kimia.
@@ -23,14 +24,14 @@ Sisfo, Statistika, Geofisika. S-2: Kimia.
 JAM LAYANAN: Senin–Kamis (kantor) | Jumat WFH via online/WhatsApp.
 
 LAYANAN: Bio Ijazah → xandria.pduntan.id | SATU UNTAN → satu.untan.ac.id
-Cek Surat & Jenis Layanan → ac-fmipa-portal.vercel.app | SEKAR → sekarfmipa.vercel.app
+Cek Surat & Jenis Layanan → infobakmipa.vercel.app | SEKAR → sekarfmipa.vercel.app
 
 SURAT: Aktif Kuliah, SKL, Cuti, Pindah, Pengunduran Diri. Proses 1–2 hari kerja.
 
 DATA 2026: Mahasiswa Aktif 2.370 | Lulus 100
 Wisuda Periode IV: 29–30 Juli 2026
 
-KONTAK: WhatsApp via menu Kontak di ac-fmipa-portal.vercel.app (Senin–Jumat)
+KONTAK: WhatsApp via menu Kontak di infobakmipa.vercel.app (Senin–Jumat)
 `.trim();
 
 /* ──────────────────────────────────────────────────────────────── */
@@ -56,7 +57,7 @@ async function buildPortalDataContext() {
     const d = await r.json();
     const p = [];
     if (d.news?.length) {
-      p.push('=== BERITA TERKINI (ac-fmipa-portal.vercel.app) ===');
+      p.push('=== BERITA TERKINI (infobakmipa.vercel.app) ===');
       d.news.forEach(n => p.push(`• [${n.date}] ${n.text}`));
     }
     if (d.slides?.length) {
