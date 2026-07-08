@@ -83,9 +83,9 @@
       "tag": "Pengumuman",
       "title": "Berkas Daftar Ulang",
       "desc": "Berkas daftar ulang mahasiswa baru",
-      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1782879440235-Pengumuman__4_.jpg",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1783481324388-Pengumuman__6_.jpg",
       "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1782879440235-Pengumuman__4_.jpg",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1783481324388-Pengumuman__6_.jpg",
       "popupLabel": "Berkas Daftar Ulang"
     },
     {
@@ -235,5 +235,5 @@
       "pdfLink": "https://drive.google.com/file/d/1wXUrAhyk3s3su-NZJqIwP_Q-7dIoXcgs/view"
     }
   ],
-  "updatedAt": "2026-07-06T04:39:24.850Z"
+  "updatedAt": "2026-07-08T03:28:49.800Z"
 }
