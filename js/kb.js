@@ -179,7 +179,7 @@ const KIRANA_KB = [
       '- Batas daftar: 10 Juli 2026 (via operator fakultas)\n' +
       '- Biaya D3/S1: GRATIS\n' +
       '- Biaya S2/S3/Profesi: Rp 695.000\n' +
-      '- Biaya toga: Rp 325.000 → Bank Kalbar rek. 1012556566 a.n. Apollo Mas CV\n' +
+      '- Biaya toga dan akan menjadi hak milik: Rp 325.000 → Bank Kalbar rek. 1012556566 a.n. Apollo Mas CV\n' +
       '- Ambil toga: Untan Smart Store, Gedung Perpustakaan Lt.2 (14–24 Juli 2026)\n' +
       '- Batas serahkan berkas: 9 Juli 2026',
   },
