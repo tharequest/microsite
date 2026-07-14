@@ -136,6 +136,7 @@ async function cariSurat() {
         cuti_kuliah:   "Mohon hubungi <strong>Bu Ana</strong> di Menu <strong>Kontak</strong> terkait surat ini.",
         undur_diri:    "Mohon hubungi <strong>Bu Ana</strong> di Menu <strong>Kontak</strong> terkait surat ini.",
         pindah_kuliah: "Mohon hubungi <strong>Bu Ana</strong> di Menu <strong>Kontak</strong> terkait surat ini.",
+        surat_kip:     "Mohon hubungi <strong>Bu Primanita</strong> di Menu <strong>Kontak</strong> terkait surat ini.",
       };
 
       // ── Khusus izin_kegiatan: per himpunan ──
@@ -290,7 +291,7 @@ function renderHasil(data, jenisSurat) {
         <td>${row.nim   || "–"}</td>
         <td>${row.surat || "–"}</td>
         <td>
-          <button class="cs-file-btn" onclick="openQR('${row.file || ""}')">
+          <button class="cs-file-btn" onclick="openQR('${row.file || row.lihat_surat || row.link || ""}')">
             📄 Lihat File
           </button>
         </td>
