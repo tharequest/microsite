@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/layanan-popup.css"/>
   <!-- CSS khusus Cek Surat -->
   <link rel="stylesheet" href="css/ceksurat.css"/>
+  <link rel="stylesheet" href="css/cara-cek-surat.css"/>
 </head>
 <body>
 
@@ -184,6 +185,9 @@
   <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
 </div>
 </header>
+
+<!-- ═══ Tombol bantuan — buka ulang panduan Cara Cek Surat ═══ -->
+<button id="cc-help-fab" class="cc-help-fab" aria-label="Cara Cek Surat" title="Cara Cek Surat">?</button>
 
 <!-- ═══ BACKGROUND PARTIKEL (canvas) ═════════════════════════════ -->
 <canvas id="pixelCanvas"></canvas>
@@ -399,8 +403,33 @@
   </div>
 </div>
 
+<!-- ═══ Popup Cara Cek Surat ═══════════════════════════════════════ -->
+<div class="cc-overlay" id="cc-overlay">
+  <div class="cc-modal">
+
+    <div class="cc-header">
+      <div class="cc-header-icon">❓</div>
+      <div>
+        <div class="cc-header-title">Tata Cara Cek Surat</div>
+        <div class="cc-header-sub">Panduan singkat sebelum mencari status surat kamu</div>
+      </div>
+      <button class="cc-close" id="cc-close-btn">✕</button>
+    </div>
+
+    <div class="cc-body" id="cc-body">
+      <!-- diisi otomatis oleh js/cara-cek-surat.js -->
+    </div>
+
+    <div class="cc-footer">
+      <button class="cc-footer-btn" id="cc-footer-close-btn">Mengerti, tutup panduan</button>
+    </div>
+
+  </div>
+</div>
+
 <!-- JS kontak -->
 <script src="js/kontak.js"></script>
+<script src="js/cara-cek-surat.js"></script>
 <!-- JS Portal (hamburger) -->
 <script src="js/header.js"></script>
 <script src="js/popup.js"></script>
