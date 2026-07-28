@@ -125,6 +125,17 @@
       "popupLabel": "Keterangan Aktif Kuliah"
     },
     {
+      "id": "sl-1776065824272-dqrd",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Berkas Daftar Ulang",
+      "desc": "Berkas daftar ulang mahasiswa lama",
+      "imageUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
+      "popupLabel": "Berkas Daftar Ulang"
+    },
+    {
       "id": "sl-1776065217881-dbpe",
       "slider": 2,
       "tag": "Akademik",
@@ -145,17 +156,6 @@
       "popupType": "image",
       "popupUrl": "/api/get-file?path=assets/images/1776065600006-inslide5.jpg",
       "popupLabel": "Permohonan Pindah Kuliah"
-    },
-    {
-      "id": "sl-1776065824272-dqrd",
-      "slider": 2,
-      "tag": "Pengumuman",
-      "title": "Berkas Daftar Ulang",
-      "desc": "Berkas daftar ulang mahasiswa lama",
-      "imageUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
-      "popupLabel": "Berkas Daftar Ulang"
     },
     {
       "id": "sl-1781066729260-tgga",
@@ -235,5 +235,5 @@
       "pdfLink": "https://drive.google.com/file/d/1wXUrAhyk3s3su-NZJqIwP_Q-7dIoXcgs/view"
     }
   ],
-  "updatedAt": "2026-07-28T02:06:49.777Z"
+  "updatedAt": "2026-07-28T02:06:53.208Z"
 }
