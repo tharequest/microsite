@@ -1,116 +1,6 @@
 {
   "slides": [
     {
-      "id": "sl-1781754980205-dl28",
-      "slider": 2,
-      "tag": "Pengumuman",
-      "title": "Biodata Online",
-      "desc": "Form Pengisian Biodata Online Yudisium Periode IV TA 2025/2026",
-      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781754975595-biodata_online.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781754975595-biodata_online.jpg",
-      "popupLabel": "Biodata Online"
-    },
-    {
-      "id": "s2-2",
-      "slider": 2,
-      "tag": "Akademik",
-      "title": "Permohonan Cuti Kuliah",
-      "desc": "Scan Barcode Untuk Akses Form Surat Permohonan Cuti Kuliah",
-      "imageUrl": "/api/get-file?path=assets/images/1776064298360-inslide2.png",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets/images/1776064298360-inslide2.png",
-      "popupLabel": "Permohonan Cuti Kuliah"
-    },
-    {
-      "id": "s2-1",
-      "slider": 2,
-      "tag": "Akademik",
-      "title": "Surat Keterangan Lulus",
-      "desc": "Scan Barcode Untuk Akses Form Surat Keterangan Lulus",
-      "imageUrl": "/api/get-file?path=assets/images/1776063077168-inslide3.png",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets/images/1776063077168-inslide3.png",
-      "popupLabel": "Surat Keterangan Lulus"
-    },
-    {
-      "id": "s2-0",
-      "slider": 2,
-      "tag": "Akademik",
-      "title": "Keterangan Aktif Kuliah",
-      "desc": "Scan Barcode ini Untuk Akses Form Surat Keterangan Aktif Kuliah dengan",
-      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
-      "popupLabel": "Keterangan Aktif Kuliah"
-    },
-    {
-      "id": "sl-1776065217881-dbpe",
-      "slider": 2,
-      "tag": "Akademik",
-      "title": "Surat Pengunduran Diri",
-      "desc": "Scan Barcode Untuk Akses Form Pengunduran Diri",
-      "imageUrl": "/api/get-file?path=assets/images/1776064660043-inslide4.png",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets/images/1776064660043-inslide4.png",
-      "popupLabel": "Surat Pengunduran Diri"
-    },
-    {
-      "id": "sl-1776065608739-y2d9",
-      "slider": 2,
-      "tag": "Akademik",
-      "title": "Permohonan Pindah Kuliah",
-      "desc": "Scan barcode untuk akses ke form surat permohonan pindah kuliah",
-      "imageUrl": "/api/get-file?path=assets/images/1776065600006-inslide5.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets/images/1776065600006-inslide5.jpg",
-      "popupLabel": "Permohonan Pindah Kuliah"
-    },
-    {
-      "id": "sl-1781066729260-tgga",
-      "slider": 2,
-      "tag": "Pengumuman",
-      "title": "Surat Pernyataan Terbit Jurnal",
-      "desc": "Form Isian Surat Pernyataan Pembimbing Terhadap Artikel Mahasiswa yang belum berstatus terbit",
-      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781066725346-Jurnal.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781066725346-Jurnal.jpg",
-      "popupLabel": "Surat Pernyataan Terbit Jurnal"
-    },
-    {
-      "id": "sl-1776065799207-62ek",
-      "slider": 2,
-      "tag": "Pengumuman",
-      "title": "Berkas Daftar Ulang",
-      "desc": "Berkas daftar ulang mahasiswa baru",
-      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1783481439303-Pengumuman__7_.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1783481439303-Pengumuman__7_.jpg",
-      "popupLabel": "Berkas Daftar Ulang"
-    },
-    {
-      "id": "sl-1776065824272-dqrd",
-      "slider": 2,
-      "tag": "Pengumuman",
-      "title": "Berkas Daftar Ulang",
-      "desc": "Berkas daftar ulang mahasiswa lama",
-      "imageUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
-      "popupLabel": "Berkas Daftar Ulang"
-    },
-    {
-      "id": "sl-1776065943712-hsxp",
-      "slider": 2,
-      "tag": "Pengumuman",
-      "title": "Bagi Yang Akan/Sudah Sidang",
-      "desc": "Bagi mahasiswa yang akan/sudah sidang harap segera mengisi ini",
-      "imageUrl": "/api/get-file?path=assets/images/1776065932155-slide2.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets/images/1776065932155-slide2.jpg",
-      "popupLabel": "Bagi Yang Akan/Sudah Sidang"
-    },
-    {
       "id": "s1-2",
       "slider": 1,
       "tag": "Informasi",
@@ -189,6 +79,116 @@
       "popupType": "image",
       "popupUrl": "/api/get-file?path=assets%2Fimages%2F1779239083583-Pengumuman_Peralihan_Pelayanan_Jurusan_.png",
       "popupLabel": "Administrasi Jurusan"
+    },
+    {
+      "id": "sl-1781754980205-dl28",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Biodata Online",
+      "desc": "Form Pengisian Biodata Online Yudisium Periode IV TA 2025/2026",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781754975595-biodata_online.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781754975595-biodata_online.jpg",
+      "popupLabel": "Biodata Online"
+    },
+    {
+      "id": "s2-2",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Permohonan Cuti Kuliah",
+      "desc": "Scan Barcode Untuk Akses Form Surat Permohonan Cuti Kuliah",
+      "imageUrl": "/api/get-file?path=assets/images/1776064298360-inslide2.png",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776064298360-inslide2.png",
+      "popupLabel": "Permohonan Cuti Kuliah"
+    },
+    {
+      "id": "s2-1",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Surat Keterangan Lulus",
+      "desc": "Scan Barcode Untuk Akses Form Surat Keterangan Lulus",
+      "imageUrl": "/api/get-file?path=assets/images/1776063077168-inslide3.png",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776063077168-inslide3.png",
+      "popupLabel": "Surat Keterangan Lulus"
+    },
+    {
+      "id": "s2-0",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Keterangan Aktif Kuliah",
+      "desc": "Scan Barcode ini Untuk Akses Form Surat Keterangan Aktif Kuliah dengan",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
+      "popupLabel": "Keterangan Aktif Kuliah"
+    },
+    {
+      "id": "sl-1776065217881-dbpe",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Surat Pengunduran Diri",
+      "desc": "Scan Barcode Untuk Akses Form Pengunduran Diri",
+      "imageUrl": "/api/get-file?path=assets/images/1776064660043-inslide4.png",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776064660043-inslide4.png",
+      "popupLabel": "Surat Pengunduran Diri"
+    },
+    {
+      "id": "sl-1776065608739-y2d9",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Permohonan Pindah Kuliah",
+      "desc": "Scan barcode untuk akses ke form surat permohonan pindah kuliah",
+      "imageUrl": "/api/get-file?path=assets/images/1776065600006-inslide5.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776065600006-inslide5.jpg",
+      "popupLabel": "Permohonan Pindah Kuliah"
+    },
+    {
+      "id": "sl-1776065824272-dqrd",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Berkas Daftar Ulang",
+      "desc": "Berkas daftar ulang mahasiswa lama",
+      "imageUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
+      "popupLabel": "Berkas Daftar Ulang"
+    },
+    {
+      "id": "sl-1781066729260-tgga",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Surat Pernyataan Terbit Jurnal",
+      "desc": "Form Isian Surat Pernyataan Pembimbing Terhadap Artikel Mahasiswa yang belum berstatus terbit",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781066725346-Jurnal.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781066725346-Jurnal.jpg",
+      "popupLabel": "Surat Pernyataan Terbit Jurnal"
+    },
+    {
+      "id": "sl-1776065799207-62ek",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Berkas Daftar Ulang",
+      "desc": "Berkas daftar ulang mahasiswa baru",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1783481439303-Pengumuman__7_.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1783481439303-Pengumuman__7_.jpg",
+      "popupLabel": "Berkas Daftar Ulang"
+    },
+    {
+      "id": "sl-1776065943712-hsxp",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Bagi Yang Akan/Sudah Sidang",
+      "desc": "Bagi mahasiswa yang akan/sudah sidang harap segera mengisi ini",
+      "imageUrl": "/api/get-file?path=assets/images/1776065932155-slide2.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776065932155-slide2.jpg",
+      "popupLabel": "Bagi Yang Akan/Sudah Sidang"
     }
   ],
   "news": [
@@ -235,5 +235,5 @@
       "pdfLink": "https://drive.google.com/file/d/1wXUrAhyk3s3su-NZJqIwP_Q-7dIoXcgs/view"
     }
   ],
-  "updatedAt": "2026-07-08T03:30:44.003Z"
+  "updatedAt": "2026-07-28T02:06:49.777Z"
 }
