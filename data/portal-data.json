@@ -103,6 +103,17 @@
       "popupLabel": "Permohonan Cuti Kuliah"
     },
     {
+      "id": "sl-1776065824272-dqrd",
+      "slider": 2,
+      "tag": "Pengumuman",
+      "title": "Berkas Daftar Ulang",
+      "desc": "Berkas daftar ulang mahasiswa lama",
+      "imageUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
+      "popupLabel": "Berkas Daftar Ulang"
+    },
+    {
       "id": "s2-1",
       "slider": 2,
       "tag": "Akademik",
@@ -123,17 +134,6 @@
       "popupType": "image",
       "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
       "popupLabel": "Keterangan Aktif Kuliah"
-    },
-    {
-      "id": "sl-1776065824272-dqrd",
-      "slider": 2,
-      "tag": "Pengumuman",
-      "title": "Berkas Daftar Ulang",
-      "desc": "Berkas daftar ulang mahasiswa lama",
-      "imageUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets/images/1776065819847-slide1.jpg",
-      "popupLabel": "Berkas Daftar Ulang"
     },
     {
       "id": "sl-1776065217881-dbpe",
@@ -235,5 +235,5 @@
       "pdfLink": "https://drive.google.com/file/d/1wXUrAhyk3s3su-NZJqIwP_Q-7dIoXcgs/view"
     }
   ],
-  "updatedAt": "2026-07-28T02:06:53.208Z"
+  "updatedAt": "2026-07-28T02:06:56.012Z"
 }
