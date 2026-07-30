@@ -100,7 +100,8 @@
       "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781754975595-biodata_online.jpg",
       "popupType": "image",
       "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781754975595-biodata_online.jpg",
-      "popupLabel": "Biodata Online"
+      "popupLabel": "Biodata Online",
+      "hidden": true
     },
     {
       "id": "s2-2",
@@ -235,5 +236,5 @@
       "pdfLink": "https://drive.google.com/file/d/1wXUrAhyk3s3su-NZJqIwP_Q-7dIoXcgs/view"
     }
   ],
-  "updatedAt": "2026-07-30T04:36:20.514Z"
+  "updatedAt": "2026-07-30T04:36:26.388Z"
 }
