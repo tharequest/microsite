@@ -194,6 +194,13 @@
   ],
   "news": [
     {
+      "id": "n-1785477934991-172l",
+      "date": "31 Juli",
+      "text": "Perpanjangan Pembayaran UKT Jalur SMMPTN BKS BARAT\ndan Seleksi Mandiri Tahun 2026",
+      "link": "",
+      "pdfLink": "https://drive.google.com/file/d/1PCfWS_hXVxsOCQvGPSpBV46grbJq3Q5y/view"
+    },
+    {
       "id": "n-1781751334283-muuf",
       "date": "18 Juni",
       "text": "Pendaftaran Beasiswa BSI Scolarship",
@@ -222,5 +229,5 @@
       "pdfLink": "https://drive.google.com/file/d/1SwH2Zpkv5MPVX73fvQ5uOmthCDKM4xBN/view?usp=sharing"
     }
   ],
-  "updatedAt": "2026-07-31T06:05:17.325Z"
+  "updatedAt": "2026-07-31T06:05:36.146Z"
 }
