@@ -194,6 +194,13 @@
   ],
   "news": [
     {
+      "id": "n-1786325560477-1oam",
+      "date": "10 Agt",
+      "text": "Pendaftaran dan Seleksi Beasiswa Bakti BCA Tahun 2027",
+      "link": "",
+      "pdfLink": "https://drive.google.com/file/d/1QHQetj1E2XxxhsWpS6oshIF96FwoZ98n/view?usp=sharing"
+    },
+    {
       "id": "n-1785824823740-s06o",
       "date": "4 Agt",
       "text": "Template Surat Permohonan UKT",
@@ -236,5 +243,5 @@
       "pdfLink": "https://drive.google.com/file/d/1SwH2Zpkv5MPVX73fvQ5uOmthCDKM4xBN/view?usp=sharing"
     }
   ],
-  "updatedAt": "2026-08-04T06:27:05.214Z"
+  "updatedAt": "2026-08-10T01:32:41.564Z"
 }
