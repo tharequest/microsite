@@ -92,6 +92,17 @@
       "popupLabel": "Berkas Daftar Ulang"
     },
     {
+      "id": "s2-0",
+      "slider": 2,
+      "tag": "Akademik",
+      "title": "Keterangan Aktif Kuliah",
+      "desc": "Scan Barcode ini Untuk Akses Form Surat Keterangan Aktif Kuliah dengan",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
+      "popupLabel": "Keterangan Aktif Kuliah"
+    },
+    {
       "id": "sl-1781754980205-dl28",
       "slider": 2,
       "tag": "Pengumuman",
@@ -124,17 +135,6 @@
       "popupType": "image",
       "popupUrl": "/api/get-file?path=assets/images/1776063077168-inslide3.png",
       "popupLabel": "Surat Keterangan Lulus"
-    },
-    {
-      "id": "s2-0",
-      "slider": 2,
-      "tag": "Akademik",
-      "title": "Keterangan Aktif Kuliah",
-      "desc": "Scan Barcode ini Untuk Akses Form Surat Keterangan Aktif Kuliah dengan",
-      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
-      "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1781062048664-Aktifkuliah_new.jpg",
-      "popupLabel": "Keterangan Aktif Kuliah"
     },
     {
       "id": "sl-1776065217881-dbpe",
@@ -243,5 +243,5 @@
       "pdfLink": "https://drive.google.com/file/d/1SwH2Zpkv5MPVX73fvQ5uOmthCDKM4xBN/view?usp=sharing"
     }
   ],
-  "updatedAt": "2026-08-10T01:32:41.564Z"
+  "updatedAt": "2026-08-13T09:11:31.417Z"
 }
