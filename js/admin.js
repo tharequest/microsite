@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initModals();
   initSidebarNav();
   loadVisitorStats();
+  loadLeaderboardAdmin();
 
   document.querySelectorAll('input[name="popupType"]').forEach(r =>
     r.addEventListener('change', () => togglePdfSection(r.value))
@@ -82,11 +83,69 @@ async function loadData() {
     slides = data.slides || [];
     news   = data.news   || [];
     renderAll();
+    const toggle = el('theme17Toggle');
+    if (toggle) toggle.checked = !!(data.settings && data.settings.theme17Agustus);
   } catch (err) {
     toastMsg('Gagal memuat data: ' + err.message, 'err');
   } finally {
     showPageLoading(false);
   }
+}
+
+// ── TEMA 17 AGUSTUS & LEADERBOARD ──────────────────────
+async function saveTheme17Toggle() {
+  const toggle = el('theme17Toggle');
+  if (!toggle) return;
+  try {
+    await savePortalData(slides, news, { theme17Agustus: toggle.checked });
+    toastMsg('Pengaturan tema disimpan.', 'ok');
+  } catch (err) {
+    toastMsg('Gagal menyimpan: ' + err.message, 'err');
+  }
+}
+
+async function loadLeaderboardAdmin() {
+  const tbody = el('lbAdminTbody');
+  if (!tbody) return;
+  tbody.innerHTML = '<tr><td colspan="4" style="padding:14px;color:var(--text-muted);">Memuat…</td></tr>';
+  try {
+    const res = await fetch('/api/leaderboard');
+    if (!res.ok) throw new Error('Gagal memuat leaderboard');
+    const { leaderboard } = await res.json();
+    if (!leaderboard || !leaderboard.length) {
+      tbody.innerHTML = '<tr><td colspan="4" style="padding:14px;color:var(--text-muted);">Belum ada skor.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = leaderboard.map(row => `
+      <tr>
+        <td>${row.rank}</td>
+        <td>${escapeHtmlAdmin(row.nama)}</td>
+        <td>${escapeHtmlAdmin(row.nim)}</td>
+        <td>${row.skor}</td>
+      </tr>
+    `).join('');
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="4" style="padding:14px;color:#dc2626;">Gagal memuat: ${err.message}</td></tr>`;
+  }
+}
+
+async function resetLeaderboardAdmin() {
+  if (!confirm('Yakin reset semua skor di papan skor? Aksi ini tidak bisa dibatalkan.')) return;
+  try {
+    const fetchFn = window.authFetch || fetch;
+    const res = await fetchFn('/api/leaderboard', { method: 'DELETE' });
+    if (!res.ok) throw new Error((await res.json()).error || 'Gagal reset');
+    toastMsg('Papan skor direset.', 'ok');
+    loadLeaderboardAdmin();
+  } catch (err) {
+    toastMsg('Gagal reset: ' + err.message, 'err');
+  }
+}
+
+function escapeHtmlAdmin(str) {
+  return String(str).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
 }
 
 function showPageLoading(show) {

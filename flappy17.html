@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>Flappy Merah Putih — FMIPA Untan</title>
+<link rel="icon" type="image/png" href="/assets/images/logologin.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/flappy17.css"/>
+</head>
+<body class="f17-body">
+
+<header class="f17-header">
+  <a href="index.html" class="f17-brand">
+    <img src="assets/images/logo-untan.png" alt="Logo UNTAN"/>
+    <span>FMIPA Untan</span>
+  </a>
+  <span class="f17-headline">🇮🇩 Flappy Merah Putih — Edisi 17 Agustus</span>
+</header>
+
+<main class="f17-main">
+
+  <!-- ═══ FORM GATE: nama + NIM sebelum main ═══ -->
+  <section id="gateForm" class="f17-card f17-gate">
+    <h1>Flappy Merah Putih</h1>
+    <p class="f17-sub">Masukkan nama dan NIM kamu untuk mulai main dan masuk papan skor.</p>
+    <div class="f17-field">
+      <label for="inputNama">Nama Lengkap</label>
+      <input type="text" id="inputNama" maxlength="40" placeholder="cth. Budi Santoso" autocomplete="name"/>
+    </div>
+    <div class="f17-field">
+      <label for="inputNim">NIM</label>
+      <input type="text" id="inputNim" maxlength="25" placeholder="cth. H1011231001" autocomplete="off"/>
+    </div>
+    <p id="gateError" class="f17-error"></p>
+    <button id="btnMulai" class="f17-btn-primary">Lanjut Main 🎮</button>
+  </section>
+
+  <!-- ═══ GAME AREA (tersembunyi sampai form diisi) ═══ -->
+  <section id="gameArea" class="f17-card f17-gamewrap" hidden>
+    <div id="playerTag" class="f17-playertag"></div>
+    <div id="gameContainer">
+      <canvas id="game" width="360" height="520"></canvas>
+      <div id="score">0</div>
+      <div id="overlay">
+        <h2 id="overlayTitle">Siap-siap!</h2>
+        <p id="overlayMsg">Klik / tap / spasi untuk terbang</p>
+      </div>
+    </div>
+    <p class="f17-hint">Kontrol: klik, tap layar, atau tekan Spasi</p>
+  </section>
+
+  <!-- ═══ LEADERBOARD ═══ -->
+  <section class="f17-card f17-leaderboard">
+    <div class="f17-lb-head">
+      <h2>🏆 Papan Skor</h2>
+      <button id="btnRefreshLb" class="f17-btn-ghost">🔄 Refresh</button>
+    </div>
+    <div id="lbStatus" class="f17-lb-status">Memuat papan skor…</div>
+    <table class="f17-lb-table" id="lbTable" hidden>
+      <thead>
+        <tr><th>#</th><th>Nama</th><th>NIM</th><th>Skor</th></tr>
+      </thead>
+      <tbody id="lbBody"></tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer class="f17-footer">
+  <a href="index.html">&larr; Kembali ke Portal FMIPA Untan</a>
+</footer>
+
+<script src="js/flappy17.js"></script>
+</body>
+</html>

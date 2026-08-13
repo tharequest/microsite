@@ -58,13 +58,13 @@ async function fetchPortalData(forceRefresh = false) {
 }
 
 // ── Simpan data ke API ────────────────────────────────
-async function savePortalData(slides, news) {
+async function savePortalData(slides, news, settings) {
   // Gunakan authFetch agar token Bearer ikut terkirim
   const fetchFn = (typeof window !== 'undefined' && window.authFetch) ? window.authFetch : fetch;
   const res = await fetchFn('/api/save-data', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ slides, news })
+    body: JSON.stringify({ slides, news, ...(settings ? { settings } : {}) })
   });
 
   if (!res.ok) {

@@ -44,7 +44,9 @@ module.exports = async function handler(req, res) {
 
       const file    = await ghRes.json();
       const decoded = Buffer.from(file.content, 'base64').toString('utf-8');
-      return res.status(200).json(JSON.parse(decoded));
+      const parsed  = JSON.parse(decoded);
+      if (!parsed.settings) parsed.settings = {};
+      return res.status(200).json(parsed);
     } catch (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -56,14 +58,21 @@ module.exports = async function handler(req, res) {
     if (!requireAuth(req, res)) return;
 
     try {
-      const { slides, news } = req.body;
+      const { slides, news, settings } = req.body;
       if (!slides || !news) return res.status(400).json({ error: 'slides dan news wajib ada' });
 
       let sha;
       const checkRes = await fetch(apiUrl, { headers: ghHeaders });
-      if (checkRes.ok) { sha = (await checkRes.json()).sha; }
+      let prevSettings = {};
+      if (checkRes.ok) {
+        const prevFile = await checkRes.json();
+        sha = prevFile.sha;
+        try {
+          prevSettings = JSON.parse(Buffer.from(prevFile.content, 'base64').toString('utf-8')).settings || {};
+        } catch (_) {}
+      }
 
-      const data = { slides, news, updatedAt: new Date().toISOString() };
+      const data = { slides, news, settings: { ...prevSettings, ...(settings || {}) }, updatedAt: new Date().toISOString() };
       const base64Content = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
 
       const saveRes = await fetch(apiUrl, {

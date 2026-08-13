@@ -1,5 +1,12 @@
 
 
+// ── Banner tema 17 Agustus (game Flappy Merah Putih) ────
+function applyThemeBanner(settings) {
+  const banner = document.getElementById('theme17Banner');
+  if (!banner) return;
+  banner.style.display = (settings && settings.theme17Agustus) ? 'flex' : 'none';
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
 
   // Tampilkan loading sementara data diambil dari server
@@ -20,6 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const data = await fetchPortalData();
     buildSliders(data.slides || []);
     buildNews(data.news || []);
+    applyThemeBanner(data.settings);
     startAuto();
 
   } catch (err) {
@@ -32,6 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const { data } = JSON.parse(cached);
         buildSliders(data.slides || []);
         buildNews(data.news || []);
+        applyThemeBanner(data.settings);
         startAuto();
         console.info('Data dimuat dari cache.');
       }
