@@ -117,5 +117,5 @@ body {
   100% { transform: translateY(110vh) rotate(var(--r, 0deg)) scale(var(--s, 1)); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .merdeka-flag { animation: none; display: none; }
+  .merdeka-flag { animation: none; }
 }
