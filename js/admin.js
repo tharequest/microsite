@@ -85,6 +85,8 @@ async function loadData() {
     renderAll();
     const toggle = el('theme17Toggle');
     if (toggle) toggle.checked = !!(data.settings && data.settings.theme17Agustus);
+    const merdekaToggle = el('merdekaThemeToggle');
+    if (merdekaToggle) merdekaToggle.checked = !!(data.settings && data.settings.merdekaColorTheme);
   } catch (err) {
     toastMsg('Gagal memuat data: ' + err.message, 'err');
   } finally {
@@ -99,6 +101,18 @@ async function saveTheme17Toggle() {
   try {
     await savePortalData(slides, news, { theme17Agustus: toggle.checked });
     toastMsg('Pengaturan tema disimpan.', 'ok');
+  } catch (err) {
+    toastMsg('Gagal menyimpan: ' + err.message, 'err');
+  }
+}
+
+// ── TEMA WARNA MERAH-PUTIH (SELURUH SITUS) ─────────────
+async function saveMerdekaThemeToggle() {
+  const toggle = el('merdekaThemeToggle');
+  if (!toggle) return;
+  try {
+    await savePortalData(slides, news, { merdekaColorTheme: toggle.checked });
+    toastMsg('Tema warna merah-putih ' + (toggle.checked ? 'diaktifkan.' : 'dimatikan.'), 'ok');
   } catch (err) {
     toastMsg('Gagal menyimpan: ' + err.message, 'err');
   }

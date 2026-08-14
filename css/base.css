@@ -40,6 +40,35 @@
     rgba(0,0,0,0.032) 18px,
     rgba(0,0,0,0.032) 19px
   );
+
+  --card-tint: transparent;
+}
+
+/* ════════════════════════════════════════════════════════════
+   TEMA KEMERDEKAAN 🇮🇩 — diaktifkan lewat Admin Panel
+   Diterapkan via atribut [data-theme="merdeka"] di <html>
+   (lihat js/theme.js). Slider TIDAK disentuh, sesuai request.
+   ════════════════════════════════════════════════════════════ */
+html[data-theme="merdeka"] {
+  --blue:          #CE1126;
+  --blue-dark:     #a10d1d;
+  --blue-soft:     #fdeceb;
+  --primary:       #CE1126;
+  --primary-dark:  #a10d1d;
+  --primary-light: #e14b5a;
+
+  --bg:            #fffdfd;
+  --bg-subtle:     #fff5f5;
+  --surface:       #ffffff;
+
+  --text:          #1a0d0e;
+  --text-muted:    #7a5658;
+  --text-light:    #b98d8f;
+
+  --border:        #f3cfd2;
+  --border-soft:   #fbe4e6;
+
+  --card-tint: rgba(206, 17, 38, 0.06);
 }
 
 html { scroll-behavior: smooth; }
@@ -50,4 +79,39 @@ body {
   color: var(--text);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  transition: background-color .5s ease, color .5s ease;
+}
+
+/* Kartu/permukaan yang mau ikut kena tint merah tipis saat tema aktif,
+   tinggal tambahkan class ini (opsional, dipakai bertahap). */
+.tint-surface {
+  background-image: linear-gradient(180deg, var(--card-tint), transparent 60%);
+}
+
+/* ── Background bendera kecil jatuh pelan (dirender oleh js/theme.js,
+   cuma muncul saat tema kemerdekaan aktif) ───────────────────── */
+#merdekaFlagField {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.merdeka-flag {
+  position: absolute;
+  top: -30px;
+  width: 22px;
+  height: 15px;
+  opacity: .5;
+  animation: merdekaFall linear infinite;
+  transform: rotate(var(--r, 0deg)) scale(var(--s, 1));
+}
+.merdeka-flag .mf-r { display:block; width:100%; height:50%; background:#CE1126; }
+.merdeka-flag .mf-w { display:block; width:100%; height:50%; background:#ffffff; border:1px solid #f0d9da; border-top:none; }
+@keyframes merdekaFall {
+  0%   { transform: translateY(-5vh)  rotate(var(--r, 0deg)) scale(var(--s, 1)); }
+  100% { transform: translateY(110vh) rotate(var(--r, 0deg)) scale(var(--s, 1)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .merdeka-flag { animation: none; display: none; }
 }
