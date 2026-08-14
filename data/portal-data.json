@@ -244,7 +244,8 @@
     }
   ],
   "settings": {
-    "theme17Agustus": true
+    "theme17Agustus": true,
+    "merdekaColorTheme": false
   },
-  "updatedAt": "2026-08-13T09:29:19.788Z"
+  "updatedAt": "2026-08-14T00:21:47.746Z"
 }
