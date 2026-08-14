@@ -42,6 +42,8 @@
   );
 
   --card-tint: transparent;
+  --shadow-30: rgba(37, 137, 233, 0.3);
+  --shadow-40: rgba(37, 137, 233, 0.4);
 }
 
 /* ════════════════════════════════════════════════════════════
@@ -69,6 +71,8 @@ html[data-theme="merdeka"] {
   --border-soft:   #fbe4e6;
 
   --card-tint: rgba(206, 17, 38, 0.06);
+  --shadow-30: rgba(206, 17, 38, 0.3);
+  --shadow-40: rgba(206, 17, 38, 0.4);
 }
 
 html { scroll-behavior: smooth; }
