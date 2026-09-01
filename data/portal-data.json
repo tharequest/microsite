@@ -190,6 +190,17 @@
       "popupType": "image",
       "popupUrl": "/api/get-file?path=assets/images/1776065932155-slide2.jpg",
       "popupLabel": "Bagi Yang Akan/Sudah Sidang"
+    },
+    {
+      "id": "sl-1788254257086-erd3",
+      "slider": 1,
+      "tag": "Pengumuman",
+      "title": "SOP Sidang Tugas Akhir",
+      "desc": "Alur Sidang Tugas Akhir",
+      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1788254250169-SOP_Daftar_Sidang_revised_final__1_.png",
+      "popupType": "image",
+      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1788254250169-SOP_Daftar_Sidang_revised_final__1_.png",
+      "popupLabel": "SOP Sidang Tugas Akhir"
     }
   ],
   "news": [
@@ -247,5 +258,5 @@
     "theme17Agustus": false,
     "merdekaColorTheme": true
   },
-  "updatedAt": "2026-08-31T00:57:53.502Z"
+  "updatedAt": "2026-09-01T09:17:37.216Z"
 }
