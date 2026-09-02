@@ -18,9 +18,9 @@
       "tag": "Pengumuman",
       "title": "Jam Layanan Akademik",
       "desc": "Jam Layanan Operasional Akademik dan Kemahasiswaan Senin s.d Kamis, Jumat (WFH)",
-      "imageUrl": "/api/get-file?path=assets%2Fimages%2F1786698417549-jampelayanan_merdeka.jpg",
+      "imageUrl": "/api/get-file?path=assets/images/1776060763449-0slide1.jpg",
       "popupType": "image",
-      "popupUrl": "/api/get-file?path=assets%2Fimages%2F1786698417549-jampelayanan_merdeka.jpg",
+      "popupUrl": "/api/get-file?path=assets/images/1776060763449-0slide1.jpg",
       "popupLabel": "Jam Layanan Akademik"
     },
     {
