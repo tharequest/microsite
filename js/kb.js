@@ -172,9 +172,9 @@ const KIRANA_KB = [
 
   /* ── Wisuda ── */
   {
-    id: 'wisuda_periode_iv',
+    id: 'wisuda_periode_i',
     answer:
-      'WISUDA PERIODE IV T.A. 2025/2026:\n' +
+      'WISUDA PERIODE I T.A. 2026/2027:\n' +
       '- Tanggal wisuda: 29–30 Juli 2026\n' +
       '- Batas daftar: 10 Juli 2026 (via operator fakultas)\n' +
       '- Biaya D3/S1: GRATIS\n' +
@@ -207,15 +207,16 @@ const KIRANA_KB = [
 
   /* ── Beasiswa BSI ── */
   {
-    id: 'beasiswa_bsi',
+    id: 'wisuda_periode_i',
     answer:
-      'BEASISWA BSI SCHOLARSHIP INSPIRASI 2026:\n' +
-      '- Open Recruitment: 8 Juni – 3 Juli 2026\n' +
-      '- Seleksi Administrasi: 6–13 Juli 2026\n' +
-      '- Paper Test: 17–19 Juli 2026\n' +
-      '- Pengumuman: 3 Agustus 2026\n' +
-      '- Daftar: linktr.ee/BSI_Scholarship\n' +
-      '- Info: Iswandi (0853-9353-7252) / Hendri Purwanto (0896-8965-7258)',
+      'WISUDA PERIODE I T.A. 2026/2027:(belum ada Edaran Terbaru dari untan)\n' +
+      '- Tanggal wisuda: 28 September 2026\n' +
+      '- Batas daftar: 25 September 2026 (via operator fakultas)\n' +
+      '- Biaya D3/S1: GRATIS\n' +
+      '- Biaya S2/S3/Profesi: Rp 695.000(belum ada Edaran Terbaru dari untan)\n' +
+      '- Biaya toga: Rp 325.000 (dan akan menjadi hak milik pribadi) → Bank Kalbar rek. 1012556566 a.n. Apollo Mas CV (belum ada Edaran Terbaru dari untan)\n' +
+      '- Ambil toga: Untan Smart Store, Gedung Perpustakaan Lt.2 (belum ada Edaran Terbaru dari untan)\n' +
+      '- Batas serahkan berkas: 24 September 2026 (belum ada Edaran Terbaru dari untan)',
   },
 
   /* ── Tracer Study ── */
