@@ -205,6 +205,13 @@
   ],
   "news": [
     {
+      "id": "n-1789354741984-nipn",
+      "date": "14 sep",
+      "text": "Wisuda Periode I T.A 2026/2027 Untan akan dilaksanakan pada  28 Oktober dan/atau 29 Oktober 2026",
+      "link": "",
+      "pdfLink": "https://drive.google.com/file/d/1jKeouExW-cuLoIBFqVGghe_zxku4yPXt/view?usp=drive_link"
+    },
+    {
       "id": "n-1789354708486-bpuy",
       "date": "11 sep",
       "text": "Tes Pemetaan TUTUP bagi Mahasiswa Baru",
@@ -258,5 +265,5 @@
     "theme17Agustus": false,
     "merdekaColorTheme": false
   },
-  "updatedAt": "2026-09-14T02:58:34.586Z"
+  "updatedAt": "2026-09-14T02:59:02.684Z"
 }
