@@ -8,7 +8,7 @@
       "desc": "Berkas Kelengkapan Pendaftaran Wisuda Periode I T.A 2026/2027",
       "imageUrl": "/api/get-file?path=assets/images/1776062272760-slide5.png",
       "popupType": "pdf",
-      "popupUrl": "/api/get-file?path=assets%2Fpdf%2F1788766826846-SYARAT_WISUDA_Periode_I_TA_2026-2027.pdf",
+      "popupUrl": "/api/get-file?path=assets%2Fpdf%2F1789354614110-Syarat_Wisuda_periode_1.pdf",
       "popupLabel": "Info Wisuda",
       "hidden": false
     },
@@ -251,5 +251,5 @@
     "theme17Agustus": false,
     "merdekaColorTheme": false
   },
-  "updatedAt": "2026-09-07T07:40:32.061Z"
+  "updatedAt": "2026-09-14T02:56:59.808Z"
 }
