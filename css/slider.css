@@ -12,6 +12,20 @@
   gap: 20px;
 }
 
+.slider-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.slider-label {
+  margin: 0 0 10px 2px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a3a6a;
+  letter-spacing: 0.2px;
+}
+
 .slider-card {
   position: relative;
   border-radius: 14px;
