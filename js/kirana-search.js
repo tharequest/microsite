@@ -28,6 +28,12 @@ Cek Surat & Jenis Layanan → infobakmipa.vercel.app | SEKAR → sekarfmipa.verc
 
 SURAT: Aktif Kuliah, SKL, Cuti, Pindah, Pengunduran Diri. Proses 1–2 hari kerja.
 
+DEKANAT (NIP):
+Dekan Prof. Dr. Gusrizal, S.Si., M.Si. — NIP 197108022000031001
+WD Akademik Yudha Arman, S.Si, M.Si., D.Sc. — NIP 197805132003121002
+WD Keuangan & Umum Dr. Evi Noviani, S.Si., M.Si. — NIP 198402292006042001
+WD Kemahasiswaan & Alumni Tedy Rismawan, S.Kom., M.Cs. — NIP 198609222014041002
+
 DATA 2026: Mahasiswa Aktif 2.370 | Lulus 100
 Wisuda Periode IV: 29–30 Juli 2026
 
