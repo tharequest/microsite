@@ -121,44 +121,36 @@ const KIRANA_KB = [
       '- Wakil Dekan Bid. Keuangan & Umum: Dr. Evi Noviani, S.Si., M.Si. | NIP 198402292006042001\n' +
       '- Wakil Dekan Bid. Kemahasiswaan & Alumni: Tedy Rismawan, S.Kom., M.Cs. | NIP 198609222014041002\n\n' +
       'KETUA JURUSAN:\n' +
-      '- Matematika: Dr. Yundari, S.Si., M.Sc. | NIP 198310202008012012\n' +
-      '- Fisika: Dr. Bintoro Siswo Nugroho, S.Si., M.Si. | NIP 198102062006041003\n' +
-      '- Kimia: Dr. Andi Hairil Alimuddin, S.Si., M.Si. | NIP 197109202000121001\n' +
-      '- Biologi: Dr. Kustiati, S.Si., M.Si. | NIP 197212102000032001\n' +
-      '- Ilmu Kelautan: Dr. Apriansyah, S.Si., M.Si. | NIP 198609072015041001\n' +
-      '- Rekayasa Sistem Komputer: Rahmi Hidayati, S.Kom., M.Cs. | NIP 198607202015042001\n' +
-      '- Sistem Informasi: Renny Puspita Sari, S.T., M.T. | NIP 198704182015042001\n\n' +
-      'SEKRETARIS JURUSAN:\n' +
-      '- Matematika: Dr. Nilamsari Kusumastuti, S.Si., M.Sc. | NIP 198105102005012003\n' +
-      '- Fisika: Hasanuddin, S.Si., M.Si., Ph.D. | NIP 198412162008121003\n' +
-      '- Kimia: Dr. Endah Sayekti, S.Si., M.Si. | NIP 197206222000122001\n' +
-      '- Biologi: Siti Ifadatin, S.Si., M.Si. | NIP 197103272000032001\n' +
-      '- Ilmu Kelautan: Yusuf Arief Nurrahman, S.Kel., M.Si. | NIP 198903172018031001\n' +
-      '- Rekayasa Sistem Komputer: Dwi Marisa Midyanti, S.T., M.Cs. | NIP 198003192015042001\n' +
-      '- Sistem Informasi: Ibnur Rusi, S.Kom., M.M. | NIP 198907282019031008\n\n' +
+      '- Matematika: Dr. Yundari, S.Si., M.Sc.\n' +
+      '- Fisika: Dr. Bintoro Siswo Nugroho, S.Si., M.Si.\n' +
+      '- Kimia: Dr. Andi Hairil Alimuddin, S.Si., M.Si.\n' +
+      '- Biologi: Dr. Kustiati, S.Si., M.Si.\n' +
+      '- Ilmu Kelautan: Dr. Apriansyah, S.Si., M.Si.\n' +
+      '- Rekayasa Sistem Komputer: Rahmi Hidayati, S.Kom., M.Cs.\n' +
+      '- Sistem Informasi: Renny Puspita Sari, S.T., M.T.\n\n' +
       'KOORDINATOR PRODI:\n' +
-      '- Matematika: Dr. Bayu Prihandono, S.Si., M.Sc. | NIP 197911152005011003\n' +
-      '- Statistika: Dr. Evy Sulistianingsih, S.Si., M.Sc. | NIP 198502172008122006\n' +
-      '- Fisika: Dr. Azrul Azwar, S.Si., M.Si. | NIP 198107302005011002\n' +
-      '- Geofisika: Dr. Yoga Satria Putra, S.Si., M.Si. | NIP 197910252005011002\n' +
-      '- Kimia (S1): Dr. Winda Rahmalia, S.Si., M.Si. | NIP 198402272008122004\n' +
-      '- Magister Kimia (S2): Dr. Lia Destiarti, S.Si., M.Si. | NIP 198312022008122002\n\n' +
+      '- Matematika: Dr. Bayu Prihandono, S.Si., M.Sc.\n' +
+      '- Statistika: Dr. Evy Sulistianingsih, S.Si., M.Sc.\n' +
+      '- Fisika: Dr. Azrul Azwar, S.Si., M.Si.\n' +
+      '- Geofisika: Dr. Yoga Satria Putra, S.Si., M.Si.\n' +
+      '- Kimia (S1): Dr. Winda Rahmalia, S.Si., M.Si.\n' +
+      '- Magister Kimia (S2): Dr. Lia Destiarti, S.Si., M.Si.\n\n' +
       'KEPALA LABORATORIUM:\n' +
-      '- Lab Matematika: Yudhi, S.Si., M.Si. | NIP 198504072019031004\n' +
-      '- Lab Statistika: Shantika Martha, S.Si., M.Si. | NIP 198403082008122003\n' +
-      '- Lab Fisika Dasar: Muliadi, S.Si., M.Si. | NIP 197005101999031003\n' +
-      '- Lab Fisika Lanjut & Komputasi: Dr. Dwiria Wahyuni, S.Si., M.Sc. | NIP 198206082008122001\n' +
-      '- Lab Geofisika & SIG: Dr. Joko Sampurno, S.Si., M.Si. | NIP 198408252008011004\n' +
-      '- Lab Kimia: Adhitiyawarman, S.Si., M.Si., Ph.D. | NIP 198409192008121001\n' +
-      '- Lab Bioteknologi & Riset: Prof. Rudiyansyah, S.Si., M.Si., Ph.D. | NIP 197201242000121001\n' +
-      '- Lab Biologi: Mukarlina, S.Si., M.Si. | NIP 196804062000032001\n' +
-      '- Lab Zoologi: Dr. Junardi, S.Si., M.Si. | NIP 197206132000031001\n' +
-      '- Lab Ilmu Kelautan: Warsidah, S.Si., M.Si., Apt. | NIP 197304122000032001\n' +
-      '- Lab Pemrograman & Komputasi: Suhardi, S.T., M.Eng. | NIP 198606182020121006\n' +
-      '- Lab Sistem Informasi: Ferdy Febriyanto, S.Kom., M.Kom. | NIP 198902012019031008\n\n' +
+      '- Lab Matematika: Yudhi, S.Si., M.Si.\n' +
+      '- Lab Statistika: Shantika Martha, S.Si., M.Si.\n' +
+      '- Lab Fisika Dasar: Muliadi, S.Si., M.Si.\n' +
+      '- Lab Fisika Lanjut & Komputasi: Dr. Dwiria Wahyuni, S.Si., M.Sc.\n' +
+      '- Lab Geofisika & SIG: Dr. Joko Sampurno, S.Si., M.Si.\n' +
+      '- Lab Kimia: Adhitiyawarman, S.Si., M.Si., Ph.D.\n' +
+      '- Lab Bioteknologi & Riset: Prof. Rudiyansyah, S.Si., M.Si., Ph.D.\n' +
+      '- Lab Biologi: Mukarlina, S.Si., M.Si.\n' +
+      '- Lab Zoologi: Dr. Junardi, S.Si., M.Si.\n' +
+      '- Lab Ilmu Kelautan: Warsidah, S.Si., M.Si., Apt.\n' +
+      '- Lab Pemrograman & Komputasi: Suhardi, S.T., M.Eng.\n' +
+      '- Lab Sistem Informasi: Ferdy Febriyanto, S.Kom., M.Kom.\n\n' +
       'KEPALA BAGIAN:\n' +
-      '- Kepala Bagian Tata Usaha: Eva Novianti Hestivera, S.T., S.E., M.M. | NIP 197907142006042001\n' +
-      '- Pengadministrasi Akademik: Sakdiana | NIP 198307072009102001',
+      '- Kepala Bagian Tata Usaha: Eva Novianti Hestivera, S.T., S.E., M.M.\n' +
+      '- Pengadministrasi Akademik: Sakdiana',
   },
 
   {
