@@ -7,7 +7,7 @@
   'use strict';
 
   var PROMO_ENABLED = true;
-  var PROMO_IMG_SRC = 'https://pbs.twimg.com/media/HT4aRifWMAAwk-y?format=jpg&name=large';
+  var PROMO_IMG_SRC = 'assets/images/juara-asean-cup.jpg';
   var PROMO_IMG_ALT = 'Indonesia juara FIFA ASEAN Cup 2026';
 
   if (!PROMO_ENABLED) return;
