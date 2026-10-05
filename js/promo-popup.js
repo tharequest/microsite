@@ -1,7 +1,8 @@
 /* ═══ POPUP PROMO / PENGUMUMAN GAMBAR ═══
    Muncul setiap kali halaman dimuat / di-reload.
-   Ganti gambar: ubah PROMO_IMG_SRC (disarankan file lokal, mis. '/assets/images/juara-asean-cup.jpg').
-   Matikan popup: ubah PROMO_ENABLED jadi false.
+   Ganti gambar : ubah PROMO_IMG_SRC
+   Ganti teks   : ubah PROMO_LEFT / PROMO_RIGHT (set null untuk menghilangkan)
+   Matikan popup: ubah PROMO_ENABLED jadi false
 */
 (function () {
   'use strict';
@@ -10,7 +11,30 @@
   var PROMO_IMG_SRC = '/assets/images/juara-asean-cup.jpg';
   var PROMO_IMG_ALT = 'Indonesia juara FIFA ASEAN Cup 2026';
 
+  // Teks di sisi kiri & kanan gambar (di atas latar gelap)
+  var PROMO_LEFT  = { text: 'KING', emoji: '\uD83D\uDC51' };  // 👑
+  var PROMO_RIGHT = { text: 'INDO', emoji: '\uD83D\uDD25' };  // 🔥
+
   if (!PROMO_ENABLED) return;
+
+  function makeSide(cls, cfg) {
+    if (!cfg) return null;
+    var el = document.createElement('div');
+    el.className = 'ac-promo-side ' + cls;
+    el.setAttribute('aria-hidden', 'true');
+
+    var t = document.createElement('span');
+    t.className = 'ac-promo-text';
+    t.textContent = cfg.text;
+
+    var e = document.createElement('span');
+    e.className = 'ac-promo-emoji';
+    e.textContent = cfg.emoji;
+
+    el.appendChild(t);
+    el.appendChild(e);
+    return el;
+  }
 
   function init() {
     var overlay = document.createElement('div');
@@ -35,6 +59,10 @@
     btn.innerHTML = '&#10005;';
 
     box.appendChild(img);
+    var left = makeSide('left', PROMO_LEFT);
+    var right = makeSide('right', PROMO_RIGHT);
+    if (left) box.appendChild(left);
+    if (right) box.appendChild(right);
     box.appendChild(btn);
     overlay.appendChild(box);
 
@@ -57,8 +85,7 @@
       document.body.appendChild(overlay);
       prevOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
-      // paksa reflow supaya transisi jalan
-      void overlay.offsetWidth;
+      void overlay.offsetWidth; // paksa reflow supaya transisi jalan
       overlay.classList.add('show');
       document.addEventListener('keydown', onKey);
       btn.focus();
@@ -69,9 +96,11 @@
       if (e.target === overlay) close();
     });
 
-    // Tampilkan hanya setelah gambar berhasil dimuat (tidak ada popup kosong kalau gagal)
+    // Tampilkan hanya setelah gambar berhasil dimuat
     img.onload = open;
-    img.onerror = function () { console.warn('[promo-popup] gambar gagal dimuat:', PROMO_IMG_SRC); };
+    img.onerror = function () {
+      console.warn('[promo-popup] gambar gagal dimuat:', PROMO_IMG_SRC);
+    };
     img.src = PROMO_IMG_SRC;
   }
 
