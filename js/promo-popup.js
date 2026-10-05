@@ -1,13 +1,13 @@
 /* ═══ POPUP PROMO / PENGUMUMAN GAMBAR ═══
    Muncul setiap kali halaman dimuat / di-reload.
-   Ganti gambar: ubah PROMO_IMG_SRC (disarankan file lokal, mis. 'assets/images/juara-asean-cup.jpg').
+   Ganti gambar: ubah PROMO_IMG_SRC (disarankan file lokal, mis. '/assets/images/juara-asean-cup.jpg').
    Matikan popup: ubah PROMO_ENABLED jadi false.
 */
 (function () {
   'use strict';
 
   var PROMO_ENABLED = true;
-  var PROMO_IMG_SRC = 'assets/images/juara-asean-cup.jpg';
+  var PROMO_IMG_SRC = '/assets/images/juara-asean-cup.jpg';
   var PROMO_IMG_ALT = 'Indonesia juara FIFA ASEAN Cup 2026';
 
   if (!PROMO_ENABLED) return;
@@ -71,7 +71,7 @@
 
     // Tampilkan hanya setelah gambar berhasil dimuat (tidak ada popup kosong kalau gagal)
     img.onload = open;
-    img.onerror = function () { /* gambar gagal dimuat → jangan tampilkan popup */ };
+    img.onerror = function () { console.warn('[promo-popup] gambar gagal dimuat:', PROMO_IMG_SRC); };
     img.src = PROMO_IMG_SRC;
   }
 
