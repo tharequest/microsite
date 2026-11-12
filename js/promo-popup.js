@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  var PROMO_ENABLED = true;
+  var PROMO_ENABLED = false;
   var PROMO_IMG_SRC = '/assets/images/juara-asean-cup.jpg';
   var PROMO_IMG_ALT = 'Indonesia juara FIFA ASEAN Cup 2026';
 
