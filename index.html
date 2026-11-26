@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="css/layanan-popup.css"/>
   <link rel="stylesheet" href="css/kontak.css">
   <link rel="stylesheet" href="css/promo-popup.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+  <!-- Tema ala manifest.human.tech — HARUS paling akhir. Hapus baris ini untuk kembali ke tampilan lama -->
+  <link rel="stylesheet" href="css/manifest-theme.css"/>
 </head>
 <body>
 
@@ -112,6 +115,7 @@
  <a href="ceksurat.html">Cek Surat</a>
 <!--Kontak-->  
   <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
+  <a onclick="openLayananPopup()" class="btn-cta" style="cursor:pointer">Jenis Layanan</a>
 
   <!-- <a href="https://xandria.pduntan.id/login" target="_blank">Bioijazah</a>
   <a href="https://satu.untan.ac.id/gate/login" target="_blank">Satu UNTAN</a> -->
@@ -195,23 +199,61 @@
   <a href="ceksurat.html">Cek Surat</a>
   
   <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
+  <a onclick="openLayananPopup()" style="cursor:pointer">Jenis Layanan</a>
 
   <!-- <a href="https://xandria.pduntan.id/login" target="_blank">Bioijazah</a>
   <a href="https://satu.untan.ac.id/gate/login" target="_blank">Satu UNTAN</a> --> 
 </div>
 </header>
 
+
+
+<!-- ═══ RAIL SAMPING (navigasi section) ═══════════════════════════ -->
+<aside class="mf-rail" aria-label="Navigasi bagian halaman">
+  <button class="mf-rail-cur" id="mfRailCur" type="button"></button>
+  <div class="mf-rail-dots" id="mfRailDots"></div>
+  <div class="mf-rail-sep"></div>
+  <button class="mf-rail-btn" data-label="Jenis Layanan" type="button" onclick="openLayananPopup()" aria-label="Jenis Layanan">
+    <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-2M8 12h8M8 16h5"/></svg>
+  </button>
+  <a class="mf-rail-btn" data-label="Cek Surat" href="ceksurat.html" aria-label="Cek Surat">
+    <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+  </a>
+  <button class="mf-rail-btn" data-label="Kontak" type="button" onclick="openKontakPopup()" aria-label="Kontak">
+    <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+  </button>
+</aside>
+
+<main class="mf-main" id="top">
 <!-- ═══ BANNER TEMA 17 AGUSTUS — muncul jika diaktifkan dari admin ═══ -->
-<a href="flappy17.html" id="theme17Banner" style="display:none;align-items:center;justify-content:center;gap:10px;
+<a href="flappy17.html" id="theme17Banner" class="mf-banner" style="display:none;align-items:center;justify-content:center;gap:10px;
   background:linear-gradient(90deg,#d10000,#ff2b2b,#d10000);color:#fff;text-decoration:none;
   padding:10px 16px;font-weight:700;font-size:13.5px;text-align:center;flex-wrap:wrap;">
   <span>Rayakan 17 Agustus 2026 - main <u>Flappy Merah Putih</u> &amp; masuk papan skor!</span> 🎮
 </a>
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
+<div class="mf-card">
+
+  <!-- Intro -->
+  <div class="mf-intro">
+    <h1 class="mf-title">Akademik &amp; Kemahasiswaan</h1>
+    <p class="mf-sub">Layanan Akademik dan Kemahasiswaan<br>Fakultas MIPA Universitas Tanjungpura</p>
+    <div class="mf-meta">
+      <div class="mf-meta-icons">
+        <button type="button" id="mfCopy" title="Salin tautan" aria-label="Salin tautan">
+          <svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3A4 4 0 0011 18.7l1-1"/></svg>
+        </button>
+        <a href="#pengumuman" title="Ke pengumuman" aria-label="Ke pengumuman">
+          <svg viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M10 4L8 20M16 4l-2 16"/></svg>
+        </a>
+      </div>
+      <span class="mf-version">Versi: <b>v3.7 · 2026</b></span>
+    </div>
+  </div>
 
 <!-- ═══ DUAL SLIDER ════════════════════════════════ -->
-<section class="hero">
+<section class="hero" id="pengumuman">
 <div class="slider-col">
   <h3 class="slider-label">Pengumuman</h3>
   <div class="slider-card">
@@ -232,10 +274,11 @@
     <button class="slider-btn next" data-slider="2" data-dir="1">&#8594;</button>
     <div class="slider-dots" id="dots2"></div>
   </div>
+  </div>
 </section>
 
 <!-- ═══ AKSES CEPAT ═════════════════════════════════ -->
-<section class="quick-section">
+<section class="quick-section" id="layanan">
   <div class="section-header">
     <h3>Akses Cepat Layanan</h3>
     <div class="line"></div>
@@ -265,7 +308,7 @@
 </section>
 
 <!-- ═══ INFO STRIP ═══════════════════════════════════ -->
-<section class="info-strip">
+<section class="info-strip" id="informasi">
   <div class="info-card">
     <div class="card-title"><span>📰</span> Informasi Terkini</div>
     <ul class="news-list" id="newsList"></ul>
@@ -330,6 +373,9 @@
 
   </div>
 </section>
+
+</div><!-- /.mf-card -->
+</main>
 
 <!-- ═══ FOOTER ══════════════════════════════════════ -->
 <footer>
@@ -531,6 +577,7 @@
 <script src="js/layanan-popup.js"></script>
 <script src="js/stats.js"></script>
 <script src="js/promo-popup.js"></script>
+<script src="js/sidebar.js"></script>
 
 </body>
 </html>

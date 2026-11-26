@@ -1,0 +1,305 @@
+/*
+ * manifest-theme.css — tampilan ala manifest.human.tech
+ * Dimuat PALING AKHIR di index.html, jadi menimpa css lain tanpa mengubahnya.
+ * Hapus <link> file ini untuk kembali ke tampilan lama.
+ *
+ * Isi: langit gradasi + awan, header pill melayang, rail samping,
+ *      kartu putih besar berisi konten, footer kartu kaca.
+ */
+
+:root {
+  --mf-accent: #1a2fa0;
+  --mf-accent-dark: #14247f;
+  --mf-ink: #0d0f1a;
+  --mf-muted: #7b819a;
+  --mf-serif: 'DM Serif Display', 'Lora', Georgia, serif;
+  --mf-gutter: 96px;          /* ruang kiri-kanan untuk rail samping */
+  --mf-card-w: 1040px;
+  --mf-sky: linear-gradient(180deg, #5f78d6 0%, #8196e6 30%, #b4c2f5 62%, #e6ebfc 100%);
+  --hdr-blue: var(--mf-accent);
+  --hdr-blue-dark: var(--mf-accent-dark);
+}
+
+/* Tema 17 Agustus tetap jalan: langit & aksen jadi merah-putih */
+html[data-theme="merdeka"] {
+  --mf-accent: #a10d1d;
+  --mf-accent-dark: #7d0a16;
+  --mf-sky: linear-gradient(180deg, #d4505e 0%, #e68a93 32%, #f4c3c8 64%, #fdeeee 100%);
+}
+
+/* Samakan warna utama (popup, kirana, dll) dengan aksen baru — kecuali tema merdeka */
+html:not([data-theme="merdeka"]) {
+  --primary: #1a2fa0;
+  --primary-dark: #14247f;
+  --primary-light: #5a6fd6;
+  --blue: #1a2fa0;
+  --blue-dark: #14247f;
+  --blue-soft: #eef1ff;
+  --shadow-30: rgba(26, 47, 160, .3);
+  --shadow-40: rgba(26, 47, 160, .4);
+}
+
+html { scroll-padding-top: 110px; }
+
+/* ── Latar: langit + awan ─────────────────────────── */
+body {
+  background: var(--mf-sky);
+  background-attachment: fixed;
+  padding-top: 0;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(38% 22% at 92% 78%, rgba(255,255,255,.75), transparent 70%),
+    radial-gradient(30% 18% at 78% 94%, rgba(255,255,255,.85), transparent 70%),
+    radial-gradient(26% 16% at 100% 58%, rgba(255,255,255,.5), transparent 70%),
+    radial-gradient(22% 12% at 4% 96%, rgba(255,255,255,.55), transparent 70%),
+    repeating-linear-gradient(115deg, transparent 0 46px, rgba(255,255,255,.07) 46px 48px);
+}
+.mf-main, footer { position: relative; z-index: 2; }
+
+/* ── Header: pill melayang di tengah ───────────────── */
+header { padding: 18px 20px 0 !important; }
+.header-inner,
+header.scrolled .header-inner {
+  max-width: var(--mf-card-w);
+  height: 58px;
+  padding: 0 14px 0 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.72);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: 0 6px 24px rgba(20,36,127,.10);
+}
+.logo-group img,
+header.scrolled .logo-group img { height: 32px; }
+.logo-divider,
+header.scrolled .logo-divider { height: 24px; }
+.brand-text .label,
+header.scrolled .brand-text .label {
+  font-size: 9px; opacity: 1; max-height: none;
+  color: var(--mf-accent);
+}
+.brand-text .name,
+header.scrolled .brand-text .name { font-size: 13.5px; color: var(--mf-ink); }
+
+nav.main-nav a,
+.nav-item,
+header.scrolled nav.main-nav a,
+header.scrolled .nav-item {
+  font-size: 13px; font-weight: 500; color: var(--mf-muted);
+  padding: 7px 12px; background: transparent;
+}
+nav.main-nav a::after { display: none; }
+nav.main-nav a:hover, .nav-item:hover { color: var(--mf-ink); background: rgba(26,47,160,.06); }
+nav.main-nav a.active { color: var(--mf-ink); font-weight: 700; }
+
+/* tombol hitam ala "Contribute" */
+nav.main-nav .btn-cta {
+  background: #000 !important; color: #fff !important;
+  border-radius: 6px !important; padding: 9px 18px !important;
+  font-size: 13px !important; font-weight: 600 !important;
+  box-shadow: none; margin-left: 10px;
+}
+nav.main-nav .btn-cta:hover { background: #1b1f3b !important; box-shadow: none !important; }
+
+.dropdown-menu { border-radius: 14px; border-color: rgba(26,47,160,.12); }
+
+/* ── Rail samping (pill vertikal) ──────────────────── */
+.mf-rail {
+  position: fixed; left: 16px; top: 50%; transform: translateY(-50%);
+  z-index: 950; width: 56px; padding: 8px 0 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  background: rgba(255,255,255,.88);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-radius: 999px;
+  box-shadow: 0 8px 30px rgba(20,36,127,.18);
+}
+.mf-rail button, .mf-rail a { font: inherit; }
+
+.mf-rail-cur {
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer;
+  background: #fff; color: var(--mf-ink);
+  border: 1px solid rgba(26,47,160,.18);
+  box-shadow: 0 2px 8px rgba(20,36,127,.12);
+}
+.mf-rail svg {
+  width: 19px; height: 19px; fill: none; stroke: currentColor;
+  stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+}
+
+.mf-rail-dots { display: flex; flex-direction: column; gap: 4px; padding: 6px 0; }
+.mf-dot {
+  position: relative; width: 22px; height: 22px; border: 0; padding: 0;
+  background: transparent; cursor: pointer; display: grid; place-items: center;
+}
+.mf-dot::before {
+  content: ''; width: 7px; height: 7px; border-radius: 50%;
+  background: #d2d7ea; transition: .2s;
+}
+.mf-dot:hover::before { background: #aab3dc; }
+.mf-dot.active::before { background: var(--mf-accent); transform: scale(1.45); }
+
+.mf-rail-sep { width: 22px; height: 1px; background: rgba(26,47,160,.15); margin: 2px 0 4px; }
+
+.mf-rail-btn {
+  position: relative; width: 38px; height: 38px; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer; text-decoration: none;
+  background: transparent; border: 0; color: #a7aec9; transition: .2s;
+}
+.mf-rail-btn:hover { color: var(--mf-accent); background: rgba(26,47,160,.07); }
+
+/* tooltip label */
+.mf-rail [data-label]::after {
+  content: attr(data-label);
+  position: absolute; left: 52px; top: 50%; transform: translate(-4px, -50%);
+  white-space: nowrap; pointer-events: none; opacity: 0; transition: .15s;
+  background: var(--mf-ink); color: #fff; font-size: 12px; font-weight: 500;
+  padding: 5px 10px; border-radius: 8px;
+}
+.mf-rail [data-label]:hover::after { opacity: 1; transform: translate(0, -50%); }
+
+/* ── Kartu konten utama ────────────────────────────── */
+.mf-main { padding: 108px var(--mf-gutter) 40px; }
+
+.mf-banner {
+  max-width: var(--mf-card-w); margin: 0 auto 16px; border-radius: 14px;
+}
+
+.mf-card {
+  max-width: var(--mf-card-w); margin: 0 auto;
+  background: #fff; border-radius: 24px;
+  padding: 52px 52px 60px;
+  box-shadow: 0 20px 60px rgba(20,36,127,.18);
+}
+.mf-card > * + * { margin-top: 64px !important; }
+
+/* Intro / judul besar serif */
+.mf-title {
+  font-family: var(--mf-serif); font-weight: 400;
+  font-size: clamp(36px, 5.6vw, 62px); line-height: 1.04;
+  letter-spacing: -.01em; color: var(--mf-accent);
+}
+.mf-sub { margin-top: 22px; font-size: 17px; line-height: 1.55; color: #6b6f80; }
+.mf-meta {
+  margin-top: 20px; display: flex; align-items: center;
+  justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.mf-meta-icons { display: flex; gap: 6px; }
+.mf-meta-icons button, .mf-meta-icons a {
+  width: 30px; height: 30px; display: grid; place-items: center;
+  border: 0; background: transparent; color: var(--mf-accent);
+  border-radius: 8px; cursor: pointer; transition: background .15s;
+}
+.mf-meta-icons button:hover, .mf-meta-icons a:hover { background: rgba(26,47,160,.08); }
+.mf-meta-icons svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.mf-version { font-size: 12px; color: var(--mf-muted); }
+.mf-version b { color: var(--mf-accent); font-weight: 600; }
+
+/* reset pembungkus lama agar menyatu dalam kartu */
+.mf-card .hero,
+.mf-card .quick-section,
+.mf-card .info-strip {
+  max-width: none; margin-left: 0; margin-right: 0; padding: 0;
+  animation: none;
+}
+.mf-card .hero { gap: 28px; }
+
+/* Judul section = serif biru, seperti "Introduction" */
+.slider-label,
+.section-header h3,
+.info-card .card-title {
+  font-family: var(--mf-serif); font-weight: 400;
+  color: var(--mf-accent); letter-spacing: 0;
+}
+.slider-label { font-size: 28px; margin: 0 0 16px; }
+.section-header { margin-bottom: 22px; }
+.section-header h3 { font-size: 28px; }
+.section-header .line { display: none; }
+.info-card .card-title { font-size: 22px; margin-bottom: 18px; }
+.info-card .card-title span { font-size: 18px; }
+
+/* Slider */
+.slider-card {
+  border-radius: 18px; box-shadow: none;
+  border: 1px solid rgba(26,47,160,.10);
+}
+.slider-viewport, .slide { height: 300px; }
+.slide-tag { background: var(--mf-accent); }
+.dot.active { background: #fff; }
+.slider-btn {
+  background: rgba(255,255,255,.92); color: var(--mf-accent);
+  border: 0; box-shadow: 0 2px 10px rgba(0,0,0,.18);
+}
+.slider-btn:hover { background: #fff; }
+
+/* Akses cepat */
+.quick-grid { gap: 14px; }
+.quick-card {
+  border: 1px solid rgba(26,47,160,.12); box-shadow: none;
+  border-radius: 18px; background: #fff;
+}
+.quick-card:hover {
+  transform: translateY(-3px); border-color: var(--mf-accent);
+  box-shadow: 0 10px 28px rgba(26,47,160,.12);
+}
+.quick-icon { background: rgba(26,47,160,.07) !important; border-radius: 14px; }
+.quick-card h4 { color: var(--mf-ink); font-size: 14px; }
+
+/* Info + statistik */
+.info-card {
+  background: #f6f8ff; border: 1px solid rgba(26,47,160,.08);
+  box-shadow: none; border-radius: 20px;
+}
+.news-list li { border-bottom-color: rgba(26,47,160,.10); }
+.news-date { background: var(--mf-accent); border-radius: 8px; }
+.stat-item-new { background: #fff; border: 1px solid rgba(26,47,160,.08); }
+.stat-icon-new { background: rgba(26,47,160,.07); }
+.stat-num-new { font-family: var(--mf-serif); font-weight: 400; font-size: 24px; color: var(--mf-accent); }
+
+/* ── Footer: kartu kaca ────────────────────────────── */
+footer {
+  width: min(var(--mf-card-w), calc(100% - var(--mf-gutter) * 2));
+  margin: 40px auto 120px;
+  border: 0; border-radius: 24px;
+  background: rgba(255,255,255,.88);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  box-shadow: 0 12px 40px rgba(20,36,127,.14);
+}
+.footer-bubbles, .footer-texture { display: none; }
+.footer-top { padding: 44px 40px 32px; }
+.footer-divider { max-width: none; margin: 0 40px; }
+.footer-bottom { padding: 18px 40px; }
+.footer-brand .brand-text .label { color: var(--mf-accent); }
+.footer-col h5 { color: var(--mf-ink); }
+.footer-col ul a:hover, .footer-bottom a:hover { color: var(--mf-accent); }
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 1100px) {
+  :root { --mf-gutter: 84px; }
+  .mf-card { padding: 40px 36px 48px; }
+}
+@media (max-width: 900px) {
+  :root { --mf-gutter: 14px; }
+  .mf-rail { display: none; }
+  .mf-card { padding: 32px 22px 40px; border-radius: 20px; }
+  .mf-card > * + * { margin-top: 48px !important; }
+  .slider-viewport, .slide { height: 260px !important; }
+  footer { margin-bottom: 110px; }
+  .footer-top { padding: 36px 24px 24px; }
+  .footer-divider { margin: 0 24px; }
+  .footer-bottom { padding: 16px 24px; }
+}
+@media (max-width: 600px) {
+  .mf-main { padding-top: 88px; }
+  .mf-card { padding: 26px 16px 32px; }
+  .mf-sub { font-size: 15px; }
+  .slider-label, .section-header h3 { font-size: 24px; }
+  .mf-card .slider-card { border-radius: 16px !important; }
+  .slider-viewport, .slide { height: 220px !important; }
+  .header-inner, header.scrolled .header-inner { height: 52px; padding: 0 10px 0 12px; }
+  header { padding: 12px 12px 0 !important; }
+}
