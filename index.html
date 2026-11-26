@@ -20,8 +20,8 @@
   <link rel="stylesheet" href="css/kontak.css">
   <link rel="stylesheet" href="css/promo-popup.css"/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet"/>
-  <!-- Tema ala manifest.human.tech — HARUS paling akhir. Hapus baris ini untuk kembali ke tampilan lama -->
   <link rel="stylesheet" href="css/manifest-theme.css"/>
+  <link rel="stylesheet" href="css/butterfly.css"/>
 </head>
 <body>
 
@@ -237,18 +237,19 @@
 
   <!-- Intro -->
   <div class="mf-intro">
+    <div class="mf-butterfly" id="mfButterfly" aria-hidden="true"></div>
     <h1 class="mf-title">Akademik &amp; Kemahasiswaan</h1>
     <p class="mf-sub">Layanan Akademik dan Kemahasiswaan<br>Fakultas MIPA Universitas Tanjungpura</p>
     <div class="mf-meta">
-      <div class="mf-meta-icons">
+     <!--  <div class="mf-meta-icons">
         <button type="button" id="mfCopy" title="Salin tautan" aria-label="Salin tautan">
           <svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3A4 4 0 0011 18.7l1-1"/></svg>
-        </button>
-        <a href="#pengumuman" title="Ke pengumuman" aria-label="Ke pengumuman">
+        </button> -->
+        <!-- <a href="#pengumuman" title="Ke pengumuman" aria-label="Ke pengumuman">
           <svg viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M10 4L8 20M16 4l-2 16"/></svg>
-        </a>
-      </div>
-      <span class="mf-version">Versi: <b>v3.7 · 2026</b></span>
+        </a> 
+      </div>-->
+      <!-- <span class="mf-version">Versi: <b>v3.7 · 2026</b></span> -->
     </div>
   </div>
 
@@ -578,6 +579,37 @@
 <script src="js/stats.js"></script>
 <script src="js/promo-popup.js"></script>
 <script src="js/sidebar.js"></script>
+<script src="js/candle-butterfly.js"></script>
+<!-- <script>
+// Kupu-kupu candlestick di bagian atas kartu. Hapus blok ini untuk mematikan animasi.
+(function () {
+  var host = document.getElementById('mfButterfly');
+  if (!host || !window.CandleButterfly) return;
+  var opt = { src: ['assets/videos/kupu.webm', 'assets/videos/kupu.mp4'] };
+  // Tema 17 Agustus: garis berubah merah
+  if (document.documentElement.getAttribute('data-theme') === 'merdeka') {
+    opt.colors = ['#f2b8bd', '#e68a93', '#d4505e', '#a10d1d'];
+  }
+  CandleButterfly.mount(host, opt);
+})();
+</script> -->
+<script>
+// Kupu-kupu candlestick di bagian atas kartu. Hapus blok ini untuk mematikan animasi.
+(function () {
+  var host = document.getElementById('mfButterfly');
+  if (!host || !window.CandleButterfly) return;
+  var opt = {
+    src: ['assets/videos/kupu.webm', 'assets/videos/kupu.mp4'],
+    colors: ['#F5C400', '#FFD84D', '#4F6BED', '#1a2fa0'],  // tipis → tebal (kuning, kuning, biru, biru tua)
+    inkAlpha: 0.75                                          // transparansi: 0 = hilang, 1 = pekat penuh
+  };
+  // Tema 17 Agustus: garis berubah merah
+  if (document.documentElement.getAttribute('data-theme') === 'merdeka') {
+    opt.colors = ['#f2b8bd', '#e68a93', '#d4505e', '#a10d1d'];
+  }
+  CandleButterfly.mount(host, opt);
+})();
+</script>
 
 </body>
 </html>

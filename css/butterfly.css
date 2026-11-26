@@ -1,0 +1,36 @@
+/*
+ * butterfly.css — latar kupu-kupu candlestick di bagian atas kartu (index.html)
+ * Dimuat setelah manifest-theme.css. Hapus <link> + script candle-butterfly untuk mematikan.
+ */
+.mf-card { position: relative; }
+
+.mf-butterfly {
+  position: absolute; top: 0; left: 0; right: 0; height: 460px;
+  z-index: 0; pointer-events: none;
+  border-radius: 24px 24px 0 0;
+  /* memudar ke putih di bawah supaya menyatu dengan konten */
+  -webkit-mask-image: linear-gradient(#000 58%, transparent 100%);
+          mask-image: linear-gradient(#000 58%, transparent 100%);
+}
+
+/* Jarak intro -> "Pengumuman". Perkecil angka ini untuk menaikkan slider. */
+:root {
+  --mf-intro-h: 190px;   /* tinggi area judul (ruang kupu-kupu di sisi kanan) */
+  --mf-intro-gap: 36px;  /* jarak ke judul "Pengumuman" */
+}
+.mf-intro { min-height: var(--mf-intro-h); }
+.mf-card > .mf-intro + * { margin-top: var(--mf-intro-gap) !important; }
+.mf-title, .mf-sub, .mf-meta { position: relative; z-index: 1; }
+.mf-title { text-shadow: 0 0 22px #fff, 0 0 46px #fff; }
+.mf-sub   { text-shadow: 0 0 16px #fff, 0 0 32px #fff; }
+
+/* semua blok setelah intro tampil di atas kupu-kupu */
+.mf-card > * + * { position: relative; z-index: 1; }
+
+@media (max-width: 900px) {
+  .mf-butterfly { height: 360px; }
+  :root { --mf-intro-h: 150px; --mf-intro-gap: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mf-butterfly { opacity: .6; }
+}
