@@ -23,6 +23,10 @@
   <!-- CSS khusus Cek Surat -->
   <link rel="stylesheet" href="css/ceksurat.css"/>
   <link rel="stylesheet" href="css/cara-cek-surat.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+  <!-- Tema ala manifest.human.tech — HARUS paling akhir. Hapus 2 baris ini untuk kembali ke tampilan lama -->
+  <link rel="stylesheet" href="css/manifest-theme.css"/>
+  <link rel="stylesheet" href="css/manifest-pages.css"/>
 </head>
 <body>
 
@@ -105,7 +109,8 @@
  <a href="ceksurat.html" class="active">Cek Surat</a> 
 <!--Kontak-->  
   <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
-</nav>
+  <a onclick="openLayananPopup()" class="btn-cta" style="cursor:pointer">Jenis Layanan</a>
+    </nav>
 
     <!-- Hamburger (mobile) -->
     <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
@@ -184,6 +189,7 @@
   <!-- Menu lain di mobile-->
   <a href="ceksurat.html">Cek Surat</a>
   <a onclick="openKontakPopup()" style="cursor:pointer">Kontak</a>
+    <a onclick="openLayananPopup()" style="cursor:pointer">Jenis Layanan</a>
 </div>
 </header>
 
@@ -192,6 +198,18 @@
 
 <!-- ═══ BACKGROUND PARTIKEL (canvas) ═════════════════════════════ -->
 <canvas id="pixelCanvas"></canvas>
+
+<!-- ═══ RAIL SAMPING ═══════════════════════════════════════════════ -->
+<aside class="mf-rail" aria-label="Navigasi halaman">
+  <a class="mf-rail-cur" href="ceksurat.html" aria-label="Cek Surat"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+  <div class="mf-rail-sep"></div>
+  <a class="mf-rail-btn" data-label="Beranda" href="index.html" aria-label="Beranda"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></a>
+  <a class="mf-rail-btn" data-label="FAQ" href="faq.html" aria-label="FAQ"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.8.6-1.5 1-1.5 2M12 17h.01"/></svg></a>
+  <a class="mf-rail-btn" data-label="Kebijakan Privasi" href="kebijakan-privasi.html" aria-label="Kebijakan Privasi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></a>
+  <button class="mf-rail-btn" data-label="Kontak" type="button" onclick="openKontakPopup()" aria-label="Kontak"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></button>
+</aside>
+<main class="mf-main">
+<div class="mf-card mf-narrow">
 
 <!-- ═══ HERO CARD SCRAMBLE ════════════════════════════════════════ -->
 <div class="cs-card-container">
@@ -263,6 +281,9 @@
 
 <!-- ═══ HASIL PENCARIAN ═══════════════════════════════════════════ -->
 <div id="hasil" class="cs-hasil-wrapper"></div>
+
+</div><!-- /.mf-card -->
+</main>
 
 <!-- ═══ QR MODAL ══════════════════════════════════════════════════ -->
 <div id="qrModal" class="cs-qr-modal">

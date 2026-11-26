@@ -1,0 +1,135 @@
+/*
+ * manifest-pages.css — tema ala manifest.human.tech untuk halaman dalam:
+ * Cek Surat, FAQ, Kebijakan Privasi.
+ * Dimuat SETELAH manifest-theme.css (dan setelah <style> inline halaman),
+ * jadi cukup menimpa — file css lain tidak diubah.
+ */
+
+/* ── Bagian umum ────────────────────────────────────── */
+#pixelCanvas { display: none; }              /* partikel lama diganti langit */
+.cc-help-fab { z-index: 960; }
+
+/* Halaman teks/form lebih enak dibaca di kartu yang lebih sempit */
+.mf-card.mf-narrow { max-width: min(var(--mf-card-w), 960px); }
+
+/* Rail halaman dalam: ikon bulat atas = halaman aktif (berupa link) */
+a.mf-rail-cur { text-decoration: none; }
+.mf-rail-cur svg { width: 19px; height: 19px; }
+
+/* Judul halaman = serif biru besar (dipakai ketiga halaman) */
+.mf-page-title,
+.faq-hero h1,
+.kp-hero h1 {
+  font-family: var(--mf-serif); font-weight: 400;
+  font-size: clamp(34px, 5.2vw, 58px); line-height: 1.05;
+  letter-spacing: -.01em; color: var(--mf-accent); margin: 0;
+}
+
+/* ═══════════════ CEK SURAT ═══════════════ */
+.mf-card .cs-card-container { padding: 0; }
+.mf-card .cs-cyber-card {
+  width: min(520px, 100%); height: 200px;
+  background: #f6f8ff; border: 1px solid rgba(26,47,160,.12);
+  box-shadow: none; border-radius: 22px;
+}
+.cs-cyber-card::before { background: var(--mf-accent); }
+.cs-judul-surat { color: var(--mf-accent); }
+
+.mf-card .cs-search-wrapper { padding: 0; }
+.mf-card .cs-search-card {
+  max-width: none; background: #f6f8ff; box-shadow: none;
+  border: 1px solid rgba(26,47,160,.10); border-radius: 22px;
+  padding: 30px 30px 26px;
+}
+.cs-search-title {
+  font-family: var(--mf-serif); font-weight: 400;
+  font-size: 26px; color: var(--mf-accent); margin-bottom: 6px;
+}
+.cs-search-input, .cs-search-select { background: #fff; border-color: rgba(26,47,160,.15); }
+.cs-search-input:focus, .cs-search-select:focus {
+  border-color: var(--mf-accent); box-shadow: 0 0 0 3px rgba(26,47,160,.12);
+}
+.cs-search-btn { background: #000; box-shadow: none; border-radius: 8px; }
+.cs-search-btn:hover { background: #1b1f3b; box-shadow: none; }
+
+.mf-card .cs-hasil-wrapper { max-width: none; margin: 0; padding: 0; }
+.mf-card .cs-hasil-wrapper:empty { display: none; }
+.mf-card #kontakKegiatan { max-width: none !important; margin: 0 !important; padding: 0 !important; }
+.cs-table { box-shadow: none; border: 1px solid rgba(26,47,160,.12); }
+
+/* ═══════════════ FAQ ═══════════════ */
+.faq-hero {
+  background: none; padding: 0; text-align: left; overflow: visible;
+}
+.faq-hero::before { display: none; }
+.faq-hero-badge {
+  background: rgba(26,47,160,.08); border-color: rgba(26,47,160,.16);
+  color: var(--mf-accent); margin-bottom: 18px;
+}
+.faq-hero p { color: #6b6f80; margin: 18px 0 0; max-width: 560px; font-size: 17px; }
+
+.faq-search-wrap { max-width: none; margin: 0; padding: 0; }
+.faq-search-box {
+  background: #f6f8ff; box-shadow: none; border-color: rgba(26,47,160,.14);
+  border-radius: 12px;
+}
+.faq-search-box span { color: var(--mf-accent); }
+.faq-main { max-width: none; margin: 0; padding: 0; }
+
+.faq-tab:hover, .faq-tab.active {
+  background: var(--mf-accent); border-color: var(--mf-accent); color: #fff;
+}
+.faq-group-title { color: var(--mf-accent); }
+.faq-group-title::after { background: linear-gradient(to right, rgba(26,47,160,.35), transparent); }
+.faq-item { border-color: rgba(26,47,160,.12); border-radius: 16px; }
+.faq-item:hover { border-color: rgba(26,47,160,.3); box-shadow: 0 4px 18px rgba(26,47,160,.08); }
+.faq-item.open { border-color: var(--mf-accent); box-shadow: 0 4px 24px rgba(26,47,160,.12); }
+.faq-q-icon { background: rgba(26,47,160,.07); }
+.faq-item.open .faq-q-icon { background: var(--mf-accent); }
+.faq-item.open .faq-chevron { color: var(--mf-accent); }
+.faq-a-inner a { color: var(--mf-accent); }
+.faq-cta {
+  background: #f6f8ff; border: 1px solid rgba(26,47,160,.12); border-radius: 22px;
+}
+.faq-cta h3 { font-family: var(--mf-serif); font-weight: 400; font-size: 24px; color: var(--mf-accent); }
+.faq-cta-btn { background: #000; border-radius: 8px; }
+.faq-cta-btn:hover { background: #1b1f3b; }
+
+/* ═══════════════ KEBIJAKAN PRIVASI ═══════════════ */
+.kp-hero { background: none; padding: 0; text-align: left; overflow: visible; }
+.kp-hero::before { display: none; }
+.kp-hero-badge {
+  background: rgba(26,47,160,.08); border-color: rgba(26,47,160,.16);
+  color: var(--mf-accent); margin-bottom: 18px;
+}
+.kp-hero p { color: #6b6f80; margin: 18px 0 0; max-width: 600px; font-size: 17px; }
+.kp-updated { background: rgba(26,47,160,.07); color: var(--mf-accent); margin-top: 18px; }
+
+.kp-summary { max-width: none; margin: 0; padding: 0; }
+.kp-sum-card {
+  background: #f6f8ff; box-shadow: none;
+  border: 1px solid rgba(26,47,160,.10); border-radius: 18px;
+}
+.kp-content { max-width: none; margin: 0; padding: 0; }
+.kp-toc { background: #f6f8ff; border: 1px solid rgba(26,47,160,.12); border-radius: 18px; }
+.kp-toc-title, .kp-toc ol a { color: var(--mf-accent); }
+.kp-toc ol a:hover { color: var(--mf-accent-dark); }
+.kp-section h2 { font-family: var(--mf-serif); font-weight: 400; font-size: 26px; color: var(--mf-accent); }
+.kp-section-num { background: var(--mf-accent); }
+.kp-divider { background: linear-gradient(to right, rgba(26,47,160,.4), rgba(26,47,160,.08), transparent); }
+.kp-contact { background: #f6f8ff; border: 1px solid rgba(26,47,160,.12); border-radius: 22px; }
+.kp-contact h3 { font-family: var(--mf-serif); font-weight: 400; font-size: 24px; color: var(--mf-accent); }
+.kp-contact-btn { background: #000; border-radius: 8px; }
+.kp-contact-btn:hover { background: #1b1f3b; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .mf-card .cs-search-card { padding: 22px 18px 20px; }
+  .faq-hero p, .kp-hero p { font-size: 15px; }
+}
+
+/* Jarak antar blok di halaman dalam lebih rapat dari beranda */
+.mf-card.mf-narrow > * + * { margin-top: 36px !important; }
+
+/* Tombol bantuan "?" di Cek Surat */
+.cc-help-fab { background: var(--mf-accent); }
