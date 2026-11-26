@@ -14,7 +14,7 @@
   --mf-muted: #7b819a;
   --mf-serif: 'DM Serif Display', 'Lora', Georgia, serif;
   --mf-gutter: 96px;          /* ruang kiri-kanan untuk rail samping */
-  --mf-card-w: 1040px;
+  --mf-card-w: 1280px;
   --mf-sky: linear-gradient(180deg, #5f78d6 0%, #8196e6 30%, #b4c2f5 62%, #e6ebfc 100%);
   --hdr-blue: var(--mf-accent);
   --hdr-blue-dark: var(--mf-accent-dark);
@@ -227,7 +227,7 @@ nav.main-nav .btn-cta:hover { background: #1b1f3b !important; box-shadow: none !
   border-radius: 18px; box-shadow: none;
   border: 1px solid rgba(26,47,160,.10);
 }
-.slider-viewport, .slide { height: 300px; }
+.slider-viewport, .slide { height: 360px; }
 .slide-tag { background: var(--mf-accent); }
 .dot.active { background: #fff; }
 .slider-btn {
